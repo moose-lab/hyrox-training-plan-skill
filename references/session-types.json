@@ -1,0 +1,223 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "created": "2026-07-05",
+    "purpose": "Catalog of all training session types for HYROX plan generation"
+  },
+  "session_types": {
+    "running": [
+      {
+        "id": "RUN_Z2_EASY",
+        "name": "Zone 2 Easy Run",
+        "zone": "1-2",
+        "duration_min": {"min": 30, "max": 75},
+        "intensity": "conversational pace, nasal breathing possible",
+        "purpose": "Aerobic base, mitochondrial density, capillary development",
+        "frequency_per_week": {"min": 2, "max": 4},
+        "phase_applicability": ["base", "build", "peak", "taper"],
+        "progression": "Increase duration by 5-10 min per week",
+        "source": "Dan Plews, Matt Fitzgerald, Rich Ryan"
+      },
+      {
+        "id": "RUN_LONG",
+        "name": "Long Aerobic Run",
+        "zone": "2",
+        "duration_min": {"min": 60, "max": 90},
+        "intensity": "Zone 2, steady effort, RPE 5-6",
+        "purpose": "Endurance capacity, fat oxidation, mental resilience",
+        "frequency_per_week": {"min": 1, "max": 1},
+        "phase_applicability": ["base", "build"],
+        "progression": "Add 5-10 min per week up to 90 min",
+        "source": "Matt Fitzgerald, Fathom Nutrition"
+      },
+      {
+        "id": "RUN_THRESHOLD",
+        "name": "Threshold Intervals",
+        "zone": "4",
+        "duration_min": {"min": 30, "max": 60},
+        "intensity": "10km race pace, lactate ~4 mmol/L, RPE 7-8",
+        "purpose": "Lactate threshold improvement, VO2max development",
+        "format_options": [
+          "5x1km at 10km pace, 90-120s jog recovery",
+          "4x1.5km at threshold, 2min recovery",
+          "3x2km at threshold, 2-3min recovery",
+          "6x800m at 5km pace, 60-90s recovery"
+        ],
+        "frequency_per_week": {"min": 1, "max": 2},
+        "phase_applicability": ["build", "peak"],
+        "progression": "Add 1 rep per 2 weeks OR reduce recovery by 15s",
+        "source": "Rich Ryan (eHnvndpBNnM), Fathom Nutrition"
+      },
+      {
+        "id": "RUN_COMPROMISED",
+        "name": "Compromised Running",
+        "zone": "3-4",
+        "duration_min": {"min": 20, "max": 45},
+        "intensity": "Moderate-hard pace immediately after station work",
+        "purpose": "Running economy under fatigue, neuromuscular adaptation",
+        "format_options": [
+          "Station + 1km run x 4 rounds",
+          "Sled push 50m + 800m run x 5",
+          "Wall balls 50 reps + 1km run x 3",
+          "Full 4-station complex + 4x1km runs"
+        ],
+        "frequency_per_week": {"min": 1, "max": 2},
+        "phase_applicability": ["build", "peak"],
+        "progression": "Increase run pace OR add station volume",
+        "source": "Dan Plews, Hunter McIntyre, Fathom Nutrition"
+      },
+      {
+        "id": "RUN_RECOVERY",
+        "name": "Recovery Run/Walk",
+        "zone": "1",
+        "duration_min": {"min": 20, "max": 40},
+        "intensity": "Very easy, could hold conversation easily",
+        "purpose": "Active recovery, blood flow, mental break",
+        "frequency_per_week": {"min": 0, "max": 2},
+        "phase_applicability": ["base", "build", "peak", "taper"],
+        "progression": "None — keep easy",
+        "source": "General training science"
+      }
+    ],
+    "strength": [
+      {
+        "id": "STR_GENERAL",
+        "name": "General Strength",
+        "duration_min": {"min": 45, "max": 60},
+        "intensity": "Moderate loads, 8-12 reps, RPE 6-7",
+        "purpose": "Build general strength foundation, injury prevention",
+        "exercises": ["squats", "deadlifts", "bench press", "rows", "overhead press", "lunges"],
+        "frequency_per_week": {"min": 2, "max": 3},
+        "phase_applicability": ["base"],
+        "progression": "Add 2.5-5kg per week OR add 1-2 reps",
+        "source": "WOD Science, Rich Ryan"
+      },
+      {
+        "id": "STR_ENDURANCE",
+        "name": "Strength Endurance",
+        "duration_min": {"min": 40, "max": 60},
+        "intensity": "Moderate loads, 12-20 reps, shorter rest (60-90s), RPE 7-8",
+        "purpose": "Muscular endurance, lactate tolerance, HYROX station preparation",
+        "exercises": ["goblet squats 4x15", "walking lunges 4x20 steps", "farmer carry 4x100m", "wall balls 5x25", "sled push/pull practice"],
+        "frequency_per_week": {"min": 2, "max": 3},
+        "phase_applicability": ["build", "peak"],
+        "progression": "Reduce rest intervals OR increase reps OR add weight",
+        "source": "Fathom Nutrition, WOD Science (8Gl9QDw2GIQ)"
+      },
+      {
+        "id": "STR_POWER",
+        "name": "Power/Explosive Strength",
+        "duration_min": {"min": 30, "max": 45},
+        "intensity": "Moderate-heavy loads, 3-6 reps, explosive tempo, full recovery",
+        "purpose": "Rate of force development for sled push/pull, efficient station completion",
+        "exercises": ["power cleans", "box jumps", "kettlebell swings", "sled sprints", "med ball throws"],
+        "frequency_per_week": {"min": 0, "max": 2},
+        "phase_applicability": ["build", "peak"],
+        "progression": "Add 5% load per 2 weeks",
+        "source": "WOD Science: 'HYROX requires maximizing power production at moderate weights'"
+      }
+    ],
+    "hyrox_specific": [
+      {
+        "id": "HYROX_STATION_COMPLEX",
+        "name": "Station Complex",
+        "duration_min": {"min": 30, "max": 60},
+        "intensity": "Race pace or slightly below, RPE 7-8",
+        "purpose": "Practice transitions, build station-specific fitness",
+        "format_options": [
+          "SkiErg 1000m → Sled Push 50m → Run 1km → Sled Pull 50m → Run 1km",
+          "Row 1000m → Farmer Carry 200m → Run 1km → Wall Balls 50 → Run 1km",
+          "4 stations + 4 runs at 90% race pace"
+        ],
+        "frequency_per_week": {"min": 1, "max": 2},
+        "phase_applicability": ["build", "peak"],
+        "progression": "Add stations, increase to race weight, reduce rest",
+        "source": "Fathom Nutrition, Rich Ryan"
+      },
+      {
+        "id": "HYROX_FULL_SIM",
+        "name": "Full Race Simulation",
+        "duration_min": {"min": 60, "max": 120},
+        "intensity": "90-95% race effort OR exact race pace practice",
+        "purpose": "Test fitness, practice pacing, build confidence, identify weaknesses",
+        "format": "Complete 8 runs + 8 stations at race weights",
+        "frequency_per_week": {"min": 0, "max": 0.33},
+        "frequency_note": "Every 3-4 weeks during build phase. NOT weekly.",
+        "phase_applicability": ["build", "peak"],
+        "progression": "Improve pacing consistency, reduce total time",
+        "source": "All sources agree: max every 3-4 weeks"
+      },
+      {
+        "id": "HYROX_PARTIAL_SIM",
+        "name": "Partial Simulation (Half HYROX)",
+        "duration_min": {"min": 30, "max": 60},
+        "intensity": "Race pace, RPE 8",
+        "purpose": "Race-specific fitness without full recovery cost",
+        "format_options": [
+          "Stations 1-4 + runs (first half)",
+          "Stations 5-8 + runs (second half — harder)",
+          "4 random stations + 4 runs"
+        ],
+        "frequency_per_week": {"min": 0, "max": 1},
+        "phase_applicability": ["build", "peak"],
+        "progression": "Increase to race pace, add more stations",
+        "source": "Rich Ryan, WOD Science"
+      }
+    ],
+    "conditioning": [
+      {
+        "id": "COND_CROSS_TRAIN",
+        "name": "Cross-Training (Bike/Swim/Erg)",
+        "zone": "2",
+        "duration_min": {"min": 30, "max": 60},
+        "intensity": "Easy, Zone 2, non-running aerobic",
+        "purpose": "Aerobic development without running impact stress",
+        "options": ["cycling", "swimming", "SkiErg", "rowing", "elliptical"],
+        "frequency_per_week": {"min": 0, "max": 2},
+        "phase_applicability": ["base", "build", "peak"],
+        "progression": "Increase duration",
+        "source": "Frontiers paper: 'replace running with other HYROX-specific endurance activities'"
+      },
+      {
+        "id": "COND_HIIT",
+        "name": "High-Intensity Interval Training",
+        "zone": "4-5",
+        "duration_min": {"min": 20, "max": 35},
+        "intensity": "Near-max efforts with recovery, RPE 9",
+        "purpose": "VO2max development, anaerobic capacity",
+        "format_options": [
+          "8x30s max effort / 90s recovery (SkiErg or Row)",
+          "5x3min at 90% max / 3min easy",
+          "Tabata-style station work (20s on/10s off x 8)"
+        ],
+        "frequency_per_week": {"min": 0, "max": 1},
+        "phase_applicability": ["build", "peak"],
+        "progression": "Add intervals OR reduce recovery",
+        "source": "Frontiers paper: 'HIIT effectively improves VO2max with less interference'"
+      }
+    ],
+    "recovery": [
+      {
+        "id": "REC_MOBILITY",
+        "name": "Mobility/Stretching",
+        "duration_min": {"min": 15, "max": 30},
+        "intensity": "None",
+        "purpose": "Maintain range of motion, injury prevention",
+        "focus_areas": ["hip flexors", "calves", "thoracic spine", "ankles", "shoulders"],
+        "frequency_per_week": {"min": 2, "max": 7},
+        "phase_applicability": ["base", "build", "peak", "taper"],
+        "source": "General training science"
+      },
+      {
+        "id": "REC_REST",
+        "name": "Complete Rest Day",
+        "duration_min": {"min": 0, "max": 0},
+        "intensity": "None",
+        "purpose": "Full recovery, nervous system restoration",
+        "frequency_per_week": {"min": 1, "max": 2},
+        "phase_applicability": ["base", "build", "peak", "taper"],
+        "source": "Rich Ryan: 'at least 1 full rest day per week'"
+      }
+    ]
+  }
+}

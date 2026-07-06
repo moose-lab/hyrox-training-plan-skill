@@ -1,0 +1,120 @@
+{
+  "metadata": {
+    "source": "Red Bull HYROX Weights Overview + PUMA HYROX Guide (March 2026)",
+    "last_verified": "2026-07-05",
+    "notes": "Elite 15 uses same weights as Pro division. Open Men = Pro Women weights."
+  },
+  "race_format": {
+    "total_runs": 8,
+    "run_distance_m": 1000,
+    "total_running_distance_km": 8,
+    "total_stations": 8,
+    "station_order": [
+      "SkiErg",
+      "Sled Push",
+      "Sled Pull",
+      "Burpee Broad Jump",
+      "Rowing",
+      "Farmers Carry",
+      "Sandbag Lunges",
+      "Wall Balls"
+    ]
+  },
+  "divisions": {
+    "single_open_women": {
+      "division": "Open",
+      "gender": "Women",
+      "mode": "Single",
+      "stations": {
+        "skierg": {"distance_m": 1000},
+        "sled_push": {"distance_m": 50, "format": "4x12.5m", "weight_kg": 102, "note": "including sled"},
+        "sled_pull": {"distance_m": 50, "format": "4x12.5m", "weight_kg": 78, "note": "including sled"},
+        "burpee_broad_jump": {"distance_m": 80},
+        "rowing": {"distance_m": 1000},
+        "farmers_carry": {"distance_m": 200, "weight_kg_each": 16, "equipment": "2 kettlebells"},
+        "sandbag_lunges": {"distance_m": 100, "weight_kg": 10},
+        "wall_balls": {"reps": 100, "weight_kg": 4}
+      }
+    },
+    "single_open_men": {
+      "division": "Open",
+      "gender": "Men",
+      "mode": "Single",
+      "stations": {
+        "skierg": {"distance_m": 1000},
+        "sled_push": {"distance_m": 50, "format": "4x12.5m", "weight_kg": 152, "note": "including sled"},
+        "sled_pull": {"distance_m": 50, "format": "4x12.5m", "weight_kg": 103, "note": "including sled"},
+        "burpee_broad_jump": {"distance_m": 80},
+        "rowing": {"distance_m": 1000},
+        "farmers_carry": {"distance_m": 200, "weight_kg_each": 24, "equipment": "2 kettlebells"},
+        "sandbag_lunges": {"distance_m": 100, "weight_kg": 20},
+        "wall_balls": {"reps": 100, "weight_kg": 6}
+      }
+    },
+    "single_pro_women": {
+      "division": "Pro",
+      "gender": "Women",
+      "mode": "Single",
+      "note": "Same weights as Open Men",
+      "stations": {
+        "skierg": {"distance_m": 1000},
+        "sled_push": {"distance_m": 50, "format": "4x12.5m", "weight_kg": 152, "note": "including sled"},
+        "sled_pull": {"distance_m": 50, "format": "4x12.5m", "weight_kg": 103, "note": "including sled"},
+        "burpee_broad_jump": {"distance_m": 80},
+        "rowing": {"distance_m": 1000},
+        "farmers_carry": {"distance_m": 200, "weight_kg_each": 24, "equipment": "2 kettlebells"},
+        "sandbag_lunges": {"distance_m": 100, "weight_kg": 20},
+        "wall_balls": {"reps": 100, "weight_kg": 6}
+      }
+    },
+    "single_pro_men": {
+      "division": "Pro",
+      "gender": "Men",
+      "mode": "Single",
+      "note": "Same weights used by Elite 15 Men",
+      "stations": {
+        "skierg": {"distance_m": 1000},
+        "sled_push": {"distance_m": 50, "format": "4x12.5m", "weight_kg": 202, "note": "including sled"},
+        "sled_pull": {"distance_m": 50, "format": "4x12.5m", "weight_kg": 153, "note": "including sled"},
+        "burpee_broad_jump": {"distance_m": 80},
+        "rowing": {"distance_m": 1000},
+        "farmers_carry": {"distance_m": 200, "weight_kg_each": 32, "equipment": "2 kettlebells"},
+        "sandbag_lunges": {"distance_m": 100, "weight_kg": 30},
+        "wall_balls": {"reps": 100, "weight_kg": 9}
+      }
+    },
+    "elite_15": {
+      "note": "Elite 15 uses Pro division weights. Races on separate course without other divisions.",
+      "men": "Same as single_pro_men",
+      "women": "Same as single_pro_women"
+    },
+    "doubles": {
+      "note": "Two athletes run together, split station work. Mixed Doubles uses Pro Women weights.",
+      "women_open": "Same weights as single_open_women",
+      "men_open": "Same weights as single_open_men",
+      "women_pro": "Same weights as single_pro_women",
+      "men_pro": "Same weights as single_pro_men",
+      "mixed": "Same weights as single_pro_women (Open Men)"
+    },
+    "relay": {
+      "note": "Team of 4. Each athlete does 2 runs + 2 stations. Uses Open division weights.",
+      "women": "Same weights as single_open_women",
+      "men": "Same weights as single_open_men",
+      "mixed_women": "Same weights as single_open_women",
+      "mixed_men": "Same weights as single_open_men"
+    }
+  },
+  "weight_summary_table": {
+    "headers": ["Station", "Open Women", "Open Men / Pro Women", "Pro Men / Elite 15 Men"],
+    "rows": [
+      ["SkiErg", "1000m", "1000m", "1000m"],
+      ["Sled Push", "102kg", "152kg", "202kg"],
+      ["Sled Pull", "78kg", "103kg", "153kg"],
+      ["Burpee Broad Jump", "80m", "80m", "80m"],
+      ["Rowing", "1000m", "1000m", "1000m"],
+      ["Farmers Carry", "2x16kg / 200m", "2x24kg / 200m", "2x32kg / 200m"],
+      ["Sandbag Lunges", "10kg / 100m", "20kg / 100m", "30kg / 100m"],
+      ["Wall Balls", "4kg / 100 reps", "6kg / 100 reps", "9kg / 100 reps"]
+    ]
+  }
+}

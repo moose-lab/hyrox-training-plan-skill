@@ -1,0 +1,167 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "created": "2026-07-05",
+    "sources": "22 YouTube video analyses + 7 academic/web sources",
+    "purpose": "Non-negotiable constraints for HYROX training plan generation"
+  },
+  "principles": [
+    {
+      "id": "P1",
+      "name": "Aerobic Dominance",
+      "category": "physiological",
+      "constraint": "Aerobic training volume must constitute ≥60% of total training volume",
+      "evidence_tier": "A",
+      "sources": [
+        {"type": "research", "ref": "Frontiers PMC11994925: >60% of race time is running"},
+        {"type": "video", "ref": "Dan Plews (sP13NcbZcKI): '60% of the HYROX race is running'"},
+        {"type": "video", "ref": "Rich Ryan (EWLqwwoOsnc): '5 aerobic days minimum per 7-day week'"},
+        {"type": "video", "ref": "Matt Fitzgerald (r_OYi6B0tjA): '70-80% of running volume in Zone 2'"},
+        {"type": "web", "ref": "Fathom Nutrition: 'Aerobic base 70-80% of running volume at Zone 2'"}
+      ],
+      "validation_rule": "sum(aerobic_sessions) / sum(total_sessions) >= 0.6"
+    },
+    {
+      "id": "P2",
+      "name": "VO2max Development Priority",
+      "category": "physiological",
+      "constraint": "Training must include systematic VO2max development through threshold and interval work",
+      "evidence_tier": "A",
+      "sources": [
+        {"type": "research", "ref": "Frontiers PMC11994925: VO2max ρ=-0.71 with finish time (strongest predictor)"},
+        {"type": "research", "ref": "HYROX Sports Science Report 2025: 'VO2 Max is the #1 predictor'"},
+        {"type": "video", "ref": "Rich Ryan (eHnvndpBNnM): 'Threshold training is the most important element'"},
+        {"type": "video", "ref": "Dan Plews (xUcSSpN2nqU): 'Managing the finite anaerobic work capacity (W Prime)'"}
+      ],
+      "validation_rule": "weekly_threshold_minutes >= 30 AND weekly_threshold_minutes <= 100"
+    },
+    {
+      "id": "P3",
+      "name": "Progressive Overload",
+      "category": "training_science",
+      "constraint": "Weekly volume increase must not exceed 10%. Progression via distance, weight, density, or recovery time reduction",
+      "evidence_tier": "B",
+      "sources": [
+        {"type": "video", "ref": "Rich Ryan (EWLqwwoOsnc): '10% safe weekly increase for total volume'"},
+        {"type": "video", "ref": "Rich Ryan (EWLqwwoOsnc): 'small tangible jumps: 2.5km running, 5min Zone 4, 5lbs lift'"},
+        {"type": "web", "ref": "Standard exercise science principle (ACSM guidelines)"}
+      ],
+      "validation_rule": "week_N_volume / week_N-1_volume <= 1.10"
+    },
+    {
+      "id": "P4",
+      "name": "Periodization Structure",
+      "category": "training_science",
+      "constraint": "Plan must follow Base → Build → Peak → Taper structure with defined phase durations",
+      "evidence_tier": "B",
+      "sources": [
+        {"type": "video", "ref": "RMR (d00x9-RK1to): General Preparation → Specific Preparation phases"},
+        {"type": "video", "ref": "Dan Plews (xUcSSpN2nqU): 'Far from event → General; Close to event → Specific'"},
+        {"type": "video", "ref": "WOD Science (8Gl9QDw2GIQ): Phase 1 Volume → Phase 2 Intervals → Phase 3 Race Sim"},
+        {"type": "web", "ref": "Fathom: Base(1-4) → Build(5-10) → Peak(11-14) → Taper(15-16)"},
+        {"type": "video", "ref": "Rich Ryan (EWLqwwoOsnc): '8 to 16 weeks for a specific training block'"}
+      ],
+      "phase_distribution": {
+        "base": {"percent": "25-40%", "focus": "aerobic capacity, movement quality, general strength"},
+        "build": {"percent": "35-45%", "focus": "threshold, strength endurance, transitions"},
+        "peak": {"percent": "10-20%", "focus": "race simulation, specificity, pace rehearsal"},
+        "taper": {"percent": "5-15%", "focus": "volume reduction 40-50%, intensity maintained"}
+      },
+      "validation_rule": "plan has exactly 4 phases AND base_weeks + build_weeks + peak_weeks + taper_weeks == total_weeks"
+    },
+    {
+      "id": "P5",
+      "name": "Concurrent Training Management",
+      "category": "training_science",
+      "constraint": "Strength and high-intensity endurance sessions must be separated by ≥6 hours. Endurance:Strength ratio 1:1 to 2:1",
+      "evidence_tier": "A",
+      "sources": [
+        {"type": "research", "ref": "Wilson 2012 meta-analysis (1072 citations): interference effect confirmed"},
+        {"type": "research", "ref": "Frontiers PMC11994925: 'separate resistance and endurance into distinct sessions'"},
+        {"type": "video", "ref": "WOD Science (hxRA1gsNxIA): 'Separating endurance and strength by 6-24 hours'"},
+        {"type": "video", "ref": "Nick Bare (ZBltiCOAREc): 'Auto-regulation crucial for balancing concurrent training'"}
+      ],
+      "validation_rule": "no_same_day_strength_and_hard_run OR separation_hours >= 6"
+    },
+    {
+      "id": "P6",
+      "name": "Specificity (Compromised Running)",
+      "category": "physiological",
+      "constraint": "Training must include running under fatigue from functional stations (compromised running)",
+      "evidence_tier": "B",
+      "sources": [
+        {"type": "video", "ref": "Dan Plews (sP13NcbZcKI): 'Of course you need to do compromised running... total nonsense to skip it'"},
+        {"type": "video", "ref": "Hunter McIntyre (WXdyyCfQBeQ): 'Train to be fast when feeling terrible'"},
+        {"type": "research", "ref": "Frontiers PMC11994925: 'running under such circumstances could have negatively affected running economy'"},
+        {"type": "web", "ref": "Fathom: 'station-specific practice under cardiovascular fatigue is non-negotiable'"}
+      ],
+      "validation_rule": "weekly_compromised_running_sessions >= 1"
+    },
+    {
+      "id": "P7",
+      "name": "Recovery and Supercompensation",
+      "category": "training_science",
+      "constraint": "Deload every 3-4 weeks (30% volume/intensity reduction). Min 2 easy days between quality sessions. Taper 1-2 weeks pre-race",
+      "evidence_tier": "B",
+      "sources": [
+        {"type": "video", "ref": "Rich Ryan (EWLqwwoOsnc): 'every 3rd or 4th week taking about 30% off both intensity and volume'"},
+        {"type": "video", "ref": "Rich Ryan (EWLqwwoOsnc): 'at least two non-quality days between quality sessions'"},
+        {"type": "video", "ref": "Dan Plews (sP13NcbZcKI): 'Farmer's effort — always finish with 2-3 reps in reserve'"},
+        {"type": "video", "ref": "Rich Ryan (EWLqwwoOsnc): 'taper: final 1-2 weeks'"}
+      ],
+      "validation_rule": "deload_week_exists_every_3_to_4_weeks AND consecutive_hard_days <= 2 AND taper_weeks >= 1"
+    },
+    {
+      "id": "P8",
+      "name": "Intensity Distribution",
+      "category": "physiological",
+      "constraint": "Follow polarized (80/20) or pyramid model. 80% Zone 1-2, 20% Zone 4-5. Minimize unstructured Zone 3",
+      "evidence_tier": "A",
+      "sources": [
+        {"type": "research", "ref": "Seiler 2010: polarized model in elite endurance athletes"},
+        {"type": "research", "ref": "Rosenblat 2019 meta-analysis: polarized > threshold for VO2max"},
+        {"type": "video", "ref": "Matt Fitzgerald (r_OYi6B0tjA): 'Polarized 80/20 intensity distribution optimal for HYROX'"},
+        {"type": "video", "ref": "Dan Plews (sP13NcbZcKI): 'sub-threshold, lactate 3-3.5 not 4-5'"}
+      ],
+      "nuance": "Rich Ryan (jAThVWh3kfo) argues Zone 3 is valuable for mitochondrial adaptation. Disagreement exists but polarized has stronger research support.",
+      "validation_rule": "zone_1_2_percent >= 0.75 AND zone_4_5_percent <= 0.25"
+    }
+  ],
+  "anti_patterns": [
+    {
+      "id": "AP1",
+      "name": "Strength-First Trap",
+      "description": "Treating HYROX like CrossFit and prioritizing max strength over aerobic capacity",
+      "evidence": "Frontiers: muscle mass (ρ=-0.03), HGS (ρ=0.09), resistance training volume (ρ=0.34) — all NOT significant predictors",
+      "correction": "Strength training serves aerobic performance, not the other way around"
+    },
+    {
+      "id": "AP2",
+      "name": "Simulation Overload",
+      "description": "Doing full HYROX simulations every week instead of building aerobic base",
+      "evidence": "Triage Method: 'Doing more race-paced training when lacking aerobic foundation just reinforces fatigue'",
+      "correction": "Full simulations every 3-4 weeks maximum during build phase"
+    },
+    {
+      "id": "AP3",
+      "name": "Zone 3 Black Hole",
+      "description": "Training mostly at moderate-hard intensity (Zone 3) — too hard to recover, too easy to improve",
+      "evidence": "Seiler research: elite athletes avoid Zone 3; Rosenblat meta-analysis: polarized > threshold",
+      "correction": "Go easy on easy days, hard on hard days. Minimize unstructured Zone 3"
+    },
+    {
+      "id": "AP4",
+      "name": "Ignoring Running",
+      "description": "Spending most training time on stations while neglecting running development",
+      "evidence": "Frontiers: running time correlates with finish time; stations do NOT. 60%+ of race is running.",
+      "correction": "Running is the biggest performance lever. Minimum 3 dedicated run sessions per week"
+    },
+    {
+      "id": "AP5",
+      "name": "No Recovery Protocol",
+      "description": "Training hard every day without deloads or easy days",
+      "evidence": "Rich Ryan: 'at least two non-quality days between quality sessions'; Dan Plews: 'consistency is the main thing'",
+      "correction": "Deload every 3-4 weeks. 2+ easy days between hard sessions."
+    }
+  ]
+}

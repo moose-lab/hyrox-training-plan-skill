@@ -1,0 +1,118 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "created": "2026-07-05",
+    "purpose": "General HYROX training plan template for coding agents to generate customized plans"
+  },
+  "template": {
+    "plan_parameters": {
+      "total_weeks": {"type": "integer", "min": 8, "max": 16, "default": 12},
+      "sessions_per_week": {"type": "integer", "min": 4, "max": 10, "default": 6},
+      "division": {"type": "enum", "options": ["open_women", "open_men", "pro_women", "pro_men", "elite_15_women", "elite_15_men"], "default": "open_men"},
+      "current_fitness_level": {"type": "enum", "options": ["beginner", "intermediate", "advanced", "elite"], "default": "intermediate"},
+      "target_finish_time_min": {"type": "integer", "min": 55, "max": 120, "default": 80, "optional": true},
+      "available_equipment": {"type": "array", "options": ["sled", "skierg", "rower", "kettlebells", "sandbag", "wall_ball", "running_track", "treadmill"]},
+      "race_date": {"type": "date", "required": true},
+      "weekly_hours_available": {"type": "number", "min": 4, "max": 20, "default": 8}
+    },
+    "phase_allocation": {
+      "formula": "Based on total_weeks and fitness_level",
+      "rules": [
+        "base_weeks = max(2, round(total_weeks * 0.30))",
+        "build_weeks = max(3, round(total_weeks * 0.40))",
+        "peak_weeks = max(1, round(total_weeks * 0.20))",
+        "taper_weeks = max(1, round(total_weeks * 0.10))",
+        "Adjust: if beginner, increase base by 1 week, decrease peak by 1",
+        "Adjust: if elite, decrease base by 1 week, increase build by 1"
+      ]
+    },
+    "weekly_structure_by_sessions": {
+      "4_sessions": {
+        "day_1": "RUN_Z2_EASY",
+        "day_2": "STR_GENERAL or STR_ENDURANCE",
+        "day_3": "RUN_THRESHOLD or RUN_COMPROMISED",
+        "day_4": "HYROX_STATION_COMPLEX or RUN_LONG",
+        "rest_days": 3,
+        "notes": "Minimum viable plan. Prioritize aerobic + 1 quality session."
+      },
+      "5_sessions": {
+        "day_1": "RUN_Z2_EASY",
+        "day_2": "STR_ENDURANCE",
+        "day_3": "RUN_THRESHOLD",
+        "day_4": "RUN_Z2_EASY or COND_CROSS_TRAIN",
+        "day_5": "HYROX_STATION_COMPLEX",
+        "rest_days": 2,
+        "notes": "Good balance. 3 aerobic + 1 threshold + 1 HYROX-specific."
+      },
+      "6_sessions": {
+        "day_1": "RUN_Z2_EASY (40-50 min)",
+        "day_2": "HYROX_STATION_COMPLEX + RUN_COMPROMISED",
+        "day_3": "RUN_THRESHOLD (5x1km)",
+        "day_4": "STR_ENDURANCE",
+        "day_5": "RUN_Z2_EASY or REC_RECOVERY (30-40 min)",
+        "day_6": "RUN_LONG (60-75 min) OR HYROX_FULL_SIM (every 3-4 weeks)",
+        "rest_days": 1,
+        "notes": "Recommended for most competitive athletes. Matches Fathom protocol."
+      },
+      "7_sessions": {
+        "day_1": "RUN_Z2_EASY (40-50 min)",
+        "day_2": "HYROX_STATION_COMPLEX + RUN_COMPROMISED",
+        "day_3": "RUN_THRESHOLD (5x1km)",
+        "day_4": "STR_ENDURANCE (lower body focus)",
+        "day_5": "RUN_Z2_EASY + REC_MOBILITY",
+        "day_6": "RUN_LONG (60-75 min) OR HYROX_FULL_SIM",
+        "day_7": "STR_ENDURANCE (upper body) + WALL_BALLS",
+        "rest_days": 0,
+        "notes": "High volume. Requires good recovery capacity. Include deload weeks."
+      },
+      "8_plus_sessions": {
+        "note": "For elite athletes (Dan Plews model: 2 sessions/day, 15 hrs/week)",
+        "am_pm_split": true,
+        "typical_day": "AM: Run or Erg (Zone 2) | PM: Strength or HYROX-specific",
+        "weekly_running_km": "40-60",
+        "notes": "Only for athletes with 12+ months training history and 10+ hrs/week available"
+      }
+    },
+    "progression_model": {
+      "volume_progression": {
+        "base_phase": "+5-10% weekly running volume",
+        "build_phase": "+5% volume, add intensity (threshold minutes)",
+        "peak_phase": "Maintain or slightly reduce volume, increase specificity",
+        "taper_phase": "-40-50% volume, maintain intensity"
+      },
+      "intensity_progression": {
+        "base_phase": "90% Zone 1-2, 10% Zone 3-4",
+        "build_phase": "80% Zone 1-2, 20% Zone 4-5",
+        "peak_phase": "75% Zone 1-2, 25% Zone 4-5 (race-specific)",
+        "taper_phase": "85% Zone 1-2, 15% short sharp efforts"
+      },
+      "station_weight_progression": {
+        "base_phase": "60-70% of race weight",
+        "build_phase": "70-90% of race weight, reaching 100% by end",
+        "peak_phase": "100% race weight",
+        "taper_phase": "80-90% race weight (reduced volume only)"
+      }
+    },
+    "deload_schedule": {
+      "pattern": "3 weeks load + 1 week deload OR 2 weeks load + 1 week deload (for beginners)",
+      "deload_modifications": {
+        "volume": "-30%",
+        "intensity": "-30%",
+        "sessions": "Keep frequency, reduce duration",
+        "stations": "Reduce to 60-70% race weight"
+      }
+    },
+    "validation_checklist": [
+      "Total aerobic sessions >= 60% of total sessions",
+      "At least 1 threshold/quality run session per week (build/peak phases)",
+      "At least 1 compromised running session per week (build/peak phases)",
+      "No more than 2 consecutive hard days",
+      "Deload week every 3-4 weeks",
+      "Taper period of 1-2 weeks before race",
+      "Progressive overload <= 10% per week",
+      "At least 1 complete rest day per week",
+      "Full simulation no more than once every 3-4 weeks",
+      "Station weights progress to 100% race weight by peak phase"
+    ]
+  }
+}

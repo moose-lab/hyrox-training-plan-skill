@@ -1,0 +1,134 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "created": "2026-07-05",
+    "sources": "Rich Ryan, Dan Plews, WOD Science, Fathom Nutrition, Matt Fitzgerald"
+  },
+  "plan_durations": {
+    "minimum_weeks": 8,
+    "recommended_weeks": 12,
+    "maximum_weeks": 16,
+    "source": "Rich Ryan: '8 to 16 weeks for a specific training block'"
+  },
+  "phases": {
+    "base": {
+      "alternate_names": ["General Preparation", "Foundation", "Aerobic Development"],
+      "duration_percent": "25-40%",
+      "duration_weeks_12wk": "3-5",
+      "primary_focus": "Build aerobic engine and movement quality",
+      "training_emphasis": {
+        "running": "High volume, mostly Zone 2 (70-80%). Build to target weekly mileage.",
+        "strength": "General strength, compound movements, moderate loads, higher reps (8-12)",
+        "hyrox_specific": "Movement quality practice at stations, no race-pace work",
+        "intensity_distribution": "90% Zone 1-2, 10% Zone 3-4"
+      },
+      "weekly_structure_example": {
+        "sessions_per_week": "4-6",
+        "run_sessions": 4,
+        "strength_sessions": 2,
+        "hyrox_sessions": 0,
+        "running_volume_km": "25-40",
+        "key_session": "Long easy run (60-75 min Zone 2)"
+      },
+      "progression_rules": [
+        "Increase weekly running volume by 5-10% per week",
+        "Add 1 strength session if below 2/week",
+        "Focus on consistency over intensity",
+        "No quality sessions until week 2-3"
+      ]
+    },
+    "build": {
+      "alternate_names": ["Specific Preparation", "Development", "Threshold Phase"],
+      "duration_percent": "35-45%",
+      "duration_weeks_12wk": "4-5",
+      "primary_focus": "Develop threshold, strength endurance, and HYROX-specific fitness",
+      "training_emphasis": {
+        "running": "Maintain volume, add 1-2 threshold sessions/week. 80% Zone 2, 20% Zone 4.",
+        "strength": "Transition to strength endurance: higher reps (12-20), moderate loads, shorter rest",
+        "hyrox_specific": "Station complexes, compromised running, transition practice",
+        "intensity_distribution": "80% Zone 1-2, 20% Zone 4-5"
+      },
+      "weekly_structure_example": {
+        "sessions_per_week": "5-7",
+        "run_sessions": 4,
+        "strength_sessions": 2,
+        "hyrox_sessions": 1,
+        "running_volume_km": "25-35",
+        "key_sessions": ["Threshold run (5x1km at 10km pace)", "Station complex + compromised run"]
+      },
+      "progression_rules": [
+        "Add threshold volume: 30 → 60 → 80 → 100 min/week",
+        "Increase station weights toward race weight",
+        "Add compromised running after stations",
+        "Full simulation every 3-4 weeks at 90-95% effort"
+      ]
+    },
+    "peak": {
+      "alternate_names": ["Race Preparation", "Sharpening", "Competition Phase"],
+      "duration_percent": "10-20%",
+      "duration_weeks_12wk": "2-3",
+      "primary_focus": "Race-specific fitness, pacing practice, confidence building",
+      "training_emphasis": {
+        "running": "Race-pace work, pacing practice. Maintain but don't increase volume.",
+        "strength": "Maintain only. No new adaptations sought.",
+        "hyrox_specific": "Full or partial simulations at race pace. Practice transitions and pacing.",
+        "intensity_distribution": "75% Zone 1-2, 25% Zone 4-5 (race-specific)"
+      },
+      "weekly_structure_example": {
+        "sessions_per_week": "5-6",
+        "run_sessions": 3,
+        "strength_sessions": 1,
+        "hyrox_sessions": 2,
+        "running_volume_km": "20-30",
+        "key_sessions": ["Full race simulation", "Race-pace intervals with stations"]
+      },
+      "progression_rules": [
+        "Volume starts to decrease (10-15% per week)",
+        "Intensity remains high but controlled",
+        "Practice exact race-day routine",
+        "Final full simulation 2-3 weeks before race"
+      ]
+    },
+    "taper": {
+      "alternate_names": ["Recovery", "Freshening", "Pre-Competition"],
+      "duration_percent": "5-15%",
+      "duration_weeks_12wk": "1-2",
+      "primary_focus": "Shed fatigue while maintaining fitness. Arrive fresh and confident.",
+      "training_emphasis": {
+        "running": "Reduce volume 40-50%. Keep 1-2 short sharp sessions.",
+        "strength": "Minimal. 1 light session to maintain neural patterns.",
+        "hyrox_specific": "Short openers only. No full simulations.",
+        "intensity_distribution": "85% Zone 1-2, 15% short sharp efforts"
+      },
+      "weekly_structure_example": {
+        "sessions_per_week": "3-4",
+        "run_sessions": 2,
+        "strength_sessions": 1,
+        "hyrox_sessions": 0,
+        "running_volume_km": "10-15",
+        "key_sessions": ["Short race-pace opener (3-4 x 400m)", "Easy shakeout runs"]
+      },
+      "progression_rules": [
+        "Volume decreases 40-50% from peak",
+        "No new training stimuli",
+        "Focus on sleep, nutrition, hydration",
+        "Race-day logistics and mental preparation"
+      ]
+    }
+  },
+  "deload_protocol": {
+    "frequency": "Every 3rd or 4th week",
+    "volume_reduction": "30%",
+    "intensity_reduction": "30%",
+    "duration": "1 week (7 days)",
+    "what_to_maintain": "Session frequency (keep showing up), movement quality",
+    "what_to_reduce": "Distance, duration, weight, sets, reps",
+    "source": "Rich Ryan: 'every 3rd or 4th week taking about 30% off both intensity and volume'"
+  },
+  "microcycle_options": {
+    "standard": {"days": 7, "note": "Most common, aligns with work/life schedule"},
+    "extended": {"days": 9, "note": "For athletes who need more recovery between hard sessions"},
+    "compressed": {"days": 5, "note": "For time-limited athletes, higher density"},
+    "source": "Rich Ryan: '7 days standard, but 9, 10, or 14 days can work'"
+  }
+}

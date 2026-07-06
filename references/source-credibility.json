@@ -1,0 +1,154 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "created": "2026-07-05",
+    "purpose": "Source credibility assessment for all HYROX training plan knowledge"
+  },
+  "sources": {
+    "youtube_channels": [
+      {
+        "channel": "RMR Training (Rich Ryan)",
+        "credentials": "3-time HYROX Elite 15 World Championship qualifier, professional HYROX coach, runs RMR Training program",
+        "subscribers_estimate": "50K-100K",
+        "hyrox_focus": "100% HYROX-focused",
+        "content_quality": "Highly structured, data-driven, periodization-focused",
+        "videos_analyzed": 7,
+        "video_ids": ["EWLqwwoOsnc", "C9e7fYIUves", "d00x9-RK1to", "5cJAvDNlklg", "eHnvndpBNnM", "lUJZeJJ7V2s", "7tztdEhBhqA"],
+        "credibility_tier": "A",
+        "key_contribution": "Training plan construction methodology, periodization, threshold training, pacing strategy"
+      },
+      {
+        "channel": "The Next Move (Dan Plews)",
+        "credentials": "PhD in Exercise Physiology, coached Ironman world champions, personal HYROX time 58:57, Endure IQ founder",
+        "subscribers_estimate": "30K-50K",
+        "hyrox_focus": "Mixed (endurance + HYROX)",
+        "content_quality": "Science-heavy, evidence-based, practical application",
+        "videos_analyzed": 3,
+        "video_ids": ["sP13NcbZcKI", "xUcSSpN2nqU", "hxRA1gsNxIA"],
+        "credibility_tier": "A+",
+        "key_contribution": "Dose-response relationships, aerobic development, W Prime concept, compromised running"
+      },
+      {
+        "channel": "WOD Science (Gommaar D'Hulst)",
+        "credentials": "Exercise Physiologist (PhD), runs controlled training studies, publishes research",
+        "subscribers_estimate": "100K+",
+        "hyrox_focus": "Mixed (CrossFit + HYROX)",
+        "content_quality": "Research-backed, study-based, controlled experiments",
+        "videos_analyzed": 3,
+        "video_ids": ["HAKk_u3zmmY", "8Gl9QDw2GIQ", "RuWoKCpXZGg"],
+        "credibility_tier": "A",
+        "key_contribution": "Concurrent training interference, strength programming for HYROX, block periodization"
+      },
+      {
+        "channel": "Nick Bare",
+        "credentials": "Hybrid athlete, 1M+ YouTube subscribers, completed multiple HYROX races, ultramarathon runner",
+        "subscribers_estimate": "1M+",
+        "hyrox_focus": "Mixed (hybrid fitness, HYROX series)",
+        "content_quality": "Training logs, personal experience, high production value",
+        "videos_analyzed": 2,
+        "video_ids": ["ZBltiCOAREc", "FWfxQEjrEYA"],
+        "credibility_tier": "B+",
+        "key_contribution": "High-volume concurrent training example, auto-regulation, hybrid athlete perspective"
+      },
+      {
+        "channel": "Hunter McIntyre",
+        "credentials": "Former HYROX World Record holder, professional fitness racer, multiple HYROX world championship podiums",
+        "subscribers_estimate": "50K-100K",
+        "hyrox_focus": "High (HYROX + obstacle racing)",
+        "content_quality": "Practical tips, race experience, training philosophy",
+        "videos_analyzed": 2,
+        "video_ids": ["KFrTycQtMuY", "WXdyyCfQBeQ"],
+        "credibility_tier": "A",
+        "key_contribution": "Compromised running importance, race strategy, world-class training insights"
+      },
+      {
+        "channel": "8020 Endurance (Matt Fitzgerald)",
+        "credentials": "Best-selling endurance training author (80/20 Running, The Endurance Diet), certified coach",
+        "subscribers_estimate": "20K-50K",
+        "hyrox_focus": "Dedicated HYROX content series",
+        "content_quality": "Evidence-based, structured programs, clear methodology",
+        "videos_analyzed": 1,
+        "video_ids": ["r_OYi6B0tjA"],
+        "credibility_tier": "A",
+        "key_contribution": "Polarized training model applied to HYROX, intensity distribution"
+      },
+      {
+        "channel": "HYROX WORKOUTS",
+        "credentials": "Community channel focused on HYROX preparation",
+        "subscribers_estimate": "10K-30K",
+        "hyrox_focus": "100% HYROX",
+        "content_quality": "Practical, beginner-friendly, workout-focused",
+        "videos_analyzed": 2,
+        "video_ids": ["exvFC4XMXt8", "D3KIz75RHAU"],
+        "credibility_tier": "B",
+        "key_contribution": "Beginner pacing, general HYROX preparation approach"
+      },
+      {
+        "channel": "Miscellaneous",
+        "videos_analyzed": 2,
+        "video_ids": ["essZZ76S84c", "jAThVWh3kfo"],
+        "credibility_tier": "B",
+        "key_contribution": "Additional perspectives on training errors and Zone 3 debate"
+      }
+    ],
+    "academic_papers": [
+      {
+        "title": "Acute physiological responses and performance determinants in Hyrox",
+        "authors": "Brandt T, Ebel C, Lebahn C, Schmidt A",
+        "journal": "Frontiers in Physiology",
+        "year": 2025,
+        "doi": "10.3389/fphys.2025.1519240",
+        "pmcid": "PMC11994925",
+        "sample_size": 11,
+        "credibility_tier": "A",
+        "key_contribution": "First peer-reviewed HYROX study. VO2max as strongest predictor. Running dominance confirmed."
+      },
+      {
+        "title": "Predicting HYROX Performance in Elite Athletes: Station Contributions and Training Implications",
+        "authors": "Nugent F et al.",
+        "source": "ResearchGate (preprint)",
+        "year": 2026,
+        "sample_size": 6000,
+        "credibility_tier": "B+",
+        "key_contribution": "Large-scale performance analysis. Running stages 5-8 as largest performance contributors."
+      },
+      {
+        "title": "Concurrent Training: A Meta-Analysis",
+        "authors": "Wilson JM et al.",
+        "journal": "Journal of Strength and Conditioning Research",
+        "year": 2012,
+        "citations": 1072,
+        "credibility_tier": "A+",
+        "key_contribution": "Interference effect quantification. Running causes more interference than cycling."
+      },
+      {
+        "title": "HYROX Sports Science Report 2025",
+        "source": "HYROX Official (via Instagram @hyroxworld)",
+        "year": 2025,
+        "credibility_tier": "B+",
+        "key_contribution": "VO2max confirmed as #1 predictor in largest HYROX study to date"
+      }
+    ],
+    "web_sources": [
+      {
+        "title": "Improving The Aerobic System For HYROX Case Study",
+        "url": "https://triagemethod.com/aerobic-system-for-hyrox/",
+        "author": "Triage Method (professional HYROX coach)",
+        "credibility_tier": "B+",
+        "key_contribution": "Diagnostic approach to aerobic limitations, 'Strong But Fading' archetype"
+      },
+      {
+        "title": "The Science of HYROX Performance: A Complete Training and Nutrition Protocol",
+        "url": "https://www.fathomnutrition.com/blogs/all-articles/hyrox-training-guide-science-based-performance",
+        "credibility_tier": "B",
+        "key_contribution": "Complete 16-week periodization template, weekly structure, nutrition protocol"
+      },
+      {
+        "title": "HYROX Weights Overview",
+        "url": "https://www.redbull.com/us-en/hyrox-weights-overview",
+        "credibility_tier": "A",
+        "key_contribution": "Official race weights for all divisions verified"
+      }
+    ]
+  }
+}
