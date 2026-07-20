@@ -1,0 +1,294 @@
+<title>跑步地基课 · 学会轻松跑</title>
+<style>
+  :root{
+    --paper:#F1EFE9;
+    --ink:#121212;
+    --panel:#FFFFFF;
+    --soft:#E7E4DA;
+    --hyx:#FFD900;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html,body{background:var(--paper);}
+  body{font-family:-apple-system,"PingFang SC","Noto Sans SC","Microsoft YaHei",sans-serif;color:var(--ink);}
+  .stage{width:100%;display:flex;justify-content:center;}
+  .card{
+    width:1080px;height:1920px;flex:0 0 auto;
+    background:var(--paper);
+    padding:36px 36px 32px;
+    display:flex;flex-direction:column;gap:20px;justify-content:space-between;
+    transform-origin:top left;
+    font-variant-numeric:tabular-nums;
+  }
+
+  /* ---------- header ---------- */
+  .hd{display:flex;align-items:stretch;gap:20px;}
+  .hd-logo{
+    width:104px;background:var(--ink);border-radius:16px;color:#fff;
+    display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;
+    flex:0 0 auto;
+  }
+  .hd-logo .zh{font-size:36px;font-weight:900;letter-spacing:2px;}
+  .hd-logo .en{font-size:10.5px;font-weight:700;letter-spacing:1.6px;color:var(--hyx);}
+  .hd-mid{flex:1;display:flex;flex-direction:column;justify-content:center;gap:8px;padding:2px 4px;}
+  .hd-eyebrow{font-size:15px;font-weight:800;letter-spacing:3.5px;color:#555;}
+  .hd-title{font-size:60px;font-weight:900;letter-spacing:2px;line-height:1.05;text-wrap:balance;}
+  .hd-badges{display:flex;gap:10px;align-items:center;}
+  .chip{display:inline-flex;align-items:center;gap:8px;font-size:19px;font-weight:800;
+    padding:6px 14px;border-radius:8px;line-height:1;}
+  .chip-ink{background:var(--ink);color:#fff;}
+  .chip-hyx{background:var(--hyx);color:var(--ink);border:2.5px solid var(--ink);}
+  .hd-date{
+    flex:0 0 auto;min-width:214px;border:3px solid var(--ink);border-radius:14px;background:var(--panel);
+    display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;padding:12px 16px;
+  }
+  .hd-date .d1{font-size:37px;font-weight:900;letter-spacing:1px;}
+  .hd-date .d2{font-size:15px;font-weight:700;color:#444;}
+  .hd-date .d3{font-size:13px;font-weight:800;letter-spacing:1.8px;background:var(--ink);color:#fff;
+    padding:4px 10px;border-radius:6px;margin-top:2px;}
+
+  /* ---------- section shell ---------- */
+  .sec{background:var(--panel);border:3px solid var(--ink);border-radius:16px;padding:18px 24px 20px;}
+  .sec-head{display:flex;align-items:center;gap:14px;margin-bottom:14px;}
+  .sec-num{width:46px;height:46px;background:var(--ink);color:#fff;border-radius:10px;
+    display:flex;align-items:center;justify-content:center;font-size:27px;font-weight:900;flex:0 0 auto;}
+  .sec-title{font-size:31px;font-weight:900;letter-spacing:1px;}
+  .sec-en{font-size:14.5px;font-weight:800;letter-spacing:2.2px;color:#666;padding-top:8px;}
+  .sec-meta{margin-left:auto;font-size:19px;font-weight:800;background:var(--soft);
+    padding:6px 14px;border-radius:8px;white-space:nowrap;}
+
+  .ico{width:46px;height:46px;flex:0 0 auto;}
+  .ico svg{width:100%;height:100%;stroke:var(--ink);fill:none;stroke-width:7;stroke-linecap:round;stroke-linejoin:round;}
+  .ico.solid svg{fill:var(--ink);stroke:none;}
+
+  /* ---------- warmup ---------- */
+  .row-items{display:flex;gap:16px;}
+  .item{flex:1;display:flex;align-items:center;gap:14px;background:var(--paper);
+    border:2px solid var(--ink);border-radius:12px;padding:12px 16px;}
+  .item .t1{font-size:23px;font-weight:800;line-height:1.25;}
+  .item .t2{font-size:15.5px;font-weight:600;color:#555;margin-top:2px;}
+
+  /* ---------- main set ---------- */
+  .main-grid{display:flex;gap:24px;align-items:stretch;}
+  .main-num{flex:0 0 auto;display:flex;flex-direction:column;justify-content:center;align-items:center;
+    padding:6px 10px 2px;}
+  .bignum{font-size:104px;font-weight:900;line-height:.95;letter-spacing:-2px;
+    background:linear-gradient(transparent 62%,var(--hyx) 62%);padding:0 8px;}
+  .bignum-unit{font-size:18px;font-weight:900;letter-spacing:3px;margin-top:8px;text-align:center;}
+  .main-pts{flex:1;display:flex;flex-direction:column;justify-content:center;gap:11px;}
+  .pt{display:flex;align-items:center;gap:12px;font-size:23px;font-weight:700;}
+  .pt .bullet{width:13px;height:13px;background:var(--ink);border-radius:3px;flex:0 0 auto;}
+  .pt b{font-weight:900;}
+  .pt .sub{font-size:17px;color:#555;font-weight:600;}
+
+  /* ---------- anchors ---------- */
+  .anchor-grid{display:flex;gap:16px;}
+  .anchor{flex:1;border:2px solid var(--ink);border-radius:12px;background:var(--paper);
+    padding:14px 14px 12px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:8px;}
+  .anchor .nm{font-size:23px;font-weight:900;}
+  .anchor .ds{font-size:16.5px;font-weight:600;color:#444;line-height:1.4;}
+  .strip{margin-top:14px;background:var(--soft);border-radius:10px;padding:11px 16px;
+    display:flex;align-items:center;gap:12px;font-size:19px;font-weight:700;line-height:1.4;}
+  .strip .mk{font-size:22px;flex:0 0 auto;}
+  .strip b{font-weight:900;}
+
+  /* ---------- cooldown ---------- */
+  .cool-grid{display:flex;gap:16px;align-items:center;}
+  .cool-left{flex:0 0 300px;display:flex;align-items:center;gap:14px;background:var(--paper);
+    border:2px solid var(--ink);border-radius:12px;padding:12px 16px;}
+  .tags{flex:1;display:flex;flex-wrap:wrap;gap:9px;}
+  .tag{font-size:19.5px;font-weight:800;border:2px solid var(--ink);border-radius:999px;
+    padding:7px 16px;background:var(--panel);}
+
+  /* ---------- rules ---------- */
+  .rule-grid{display:flex;gap:14px;}
+  .rule{flex:1;display:flex;align-items:center;justify-content:center;gap:10px;
+    border-radius:12px;padding:13px 8px;font-size:22px;font-weight:900;letter-spacing:1px;}
+  .rule-no{background:var(--ink);color:#fff;}
+  .rule-no .x{color:var(--hyx);font-size:24px;}
+  .rule-yes{background:var(--paper);border:2px solid var(--ink);}
+  .rule-yes .v{font-size:24px;}
+  .coach{margin-top:14px;background:var(--paper);border:2px dashed var(--ink);border-radius:10px;
+    padding:12px 16px;display:flex;gap:12px;align-items:flex-start;font-size:19.5px;font-weight:700;line-height:1.45;}
+  .coach .star{font-size:22px;flex:0 0 auto;}
+  .coach b{font-weight:900;background:linear-gradient(transparent 60%,var(--hyx) 60%);}
+
+  /* ---------- footer ---------- */
+  .ft{background:var(--ink);color:#fff;border-radius:16px;padding:16px 24px;
+    display:flex;align-items:center;gap:18px;}
+  .ft-label{flex:0 0 auto;display:flex;flex-direction:column;gap:2px;}
+  .ft-label .a{font-size:13px;font-weight:800;letter-spacing:2.5px;color:var(--hyx);}
+  .ft-label .b{font-size:24px;font-weight:900;}
+  .ft-main{flex:1;font-size:21px;font-weight:700;line-height:1.45;}
+  .ft-main b{font-weight:900;color:var(--hyx);}
+  .ft-arrow{flex:0 0 auto;font-size:34px;font-weight:900;color:var(--hyx);}
+  .credit{display:flex;justify-content:space-between;align-items:center;padding:0 6px;
+    font-size:14.5px;font-weight:600;color:#666;letter-spacing:.5px;}
+  .credit .tags-line{font-weight:800;color:#333;}
+</style>
+
+<div class="stage">
+<div class="card" id="card">
+
+  <!-- HEADER -->
+  <div class="hd">
+    <div class="hd-logo">
+      <div class="zh">地基</div>
+      <div class="en">RUN · 101</div>
+    </div>
+    <div class="hd-mid">
+      <div class="hd-eyebrow">PERSONAL RUNNING · FOUNDATION</div>
+      <div class="hd-title">学会轻松跑</div>
+      <div class="hd-badges">
+        <span class="chip chip-hyx">有氧地基</span>
+        <span class="chip chip-ink">入门第 1 课</span>
+      </div>
+    </div>
+    <div class="hd-date">
+      <div class="d1">轻松跑</div>
+      <div class="d2">全程 Zone 2 · 每周 ×3</div>
+      <div class="d3">约 40 分钟</div>
+    </div>
+  </div>
+
+  <!-- 1 WARMUP -->
+  <div class="sec">
+    <div class="sec-head">
+      <div class="sec-num">1</div>
+      <div class="sec-title">热身 · 别跳过</div>
+      <div class="sec-en">WARM-UP</div>
+      <div class="sec-meta">8 分钟</div>
+    </div>
+    <div class="row-items">
+      <div class="item">
+        <div class="ico"><svg viewBox="0 0 48 48"><circle cx="27" cy="8" r="4.5"/><path d="M26 14 L20 26 L20 40"/><path d="M26 14 L30 24 L28 40"/><path d="M26 16 L34 20"/><path d="M25 18 L17 22"/></svg></div>
+        <div><div class="t1">快走→慢跑 3–4 分钟</div><div class="t2">Zone 1→2 渐进升温,别一上来就冲</div></div>
+      </div>
+      <div class="item">
+        <div class="ico"><svg viewBox="0 0 48 48"><path d="M6 34 L18 22 L26 30 L42 12"/><path d="M42 24 L42 12 L30 12"/></svg></div>
+        <div><div class="t1">动态热身 + 4×10 秒小碎步</div><div class="t2">腿摆·踝绕·弓步走·高抬腿 · 唤醒步频</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2 MAIN -->
+  <div class="sec">
+    <div class="sec-head">
+      <div class="sec-num">2</div>
+      <div class="sec-title">主课 · 连续易跑</div>
+      <div class="sec-en">MAIN SET</div>
+      <div class="sec-meta">RPE 3–4 / 10</div>
+    </div>
+    <div class="main-grid">
+      <div class="main-num">
+        <div class="bignum">3×8</div>
+        <div class="bignum-unit">分钟 · 组间走 45 秒</div>
+      </div>
+      <div class="main-pts">
+        <div class="pt"><span class="bullet"></span><span><b>说话配速</b>:全程能说出完整句子</span></div>
+        <div class="pt"><span class="bullet"></span><span>组间<b>走 45 秒</b>&nbsp;<span class="sub">重新校准呼吸</span></span></div>
+        <div class="pt"><span class="bullet"></span><span>宁可慢:<b>觉得"太慢了"通常才刚好</b></span></div>
+        <div class="pt"><span class="bullet"></span><span>鼻子能从容吸气&nbsp;<span class="sub">喘不上=太快</span></span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3 HOW EASY -->
+  <div class="sec">
+    <div class="sec-head">
+      <div class="sec-num">3</div>
+      <div class="sec-title">怎么判断"轻松"</div>
+      <div class="sec-en">HOW EASY IS EASY</div>
+      <div class="sec-meta">三选一 / 可叠加</div>
+    </div>
+    <div class="anchor-grid">
+      <div class="anchor">
+        <div class="ico"><svg viewBox="0 0 48 48"><path d="M7 11 h34 v22 h-20 l-9 8 v-8 h-5 z"/><path d="M15 20 h18 M15 27 h12"/></svg></div>
+        <div class="nm">说话测试</div>
+        <div class="ds">能说完整句子<br>只能蹦字=太快</div>
+      </div>
+      <div class="anchor">
+        <div class="ico"><svg viewBox="0 0 48 48"><path d="M6 26 q8 -9 16 0 t16 0"/><path d="M6 36 q8 -9 16 0 t16 0"/><path d="M24 16 v-8 M24 8 l-4 4 M24 8 l4 4"/></svg></div>
+        <div class="nm">呼吸法</div>
+        <div class="ds">鼻吸鼻呼从容<br>不急促</div>
+      </div>
+      <div class="anchor">
+        <div class="ico"><svg viewBox="0 0 48 48"><path d="M24 39 C 8 28 8 14 17 14 C 21 14 24 18 24 18 C 24 18 27 14 31 14 C 40 14 40 28 24 39 Z"/><path d="M9 25 h6 l3 -6 4 12 3 -6 h6"/></svg></div>
+        <div class="nm">心率 / RPE</div>
+        <div class="ds">&lt;70% 最大心率<br>或 RPE 3–4</div>
+      </div>
+    </div>
+    <div class="strip">
+      <span class="mk">◎</span>
+      <span><b>轻松跑不是"没在练":</b>它在造有氧地基——线粒体、毛细血管、耐力,全靠这些慢跑一点点堆出来。你 <b>80% 的跑</b>都该这么轻松。</span>
+    </div>
+  </div>
+
+  <!-- 4 STRIDES + COOLDOWN -->
+  <div class="sec">
+    <div class="sec-head">
+      <div class="sec-num">4</div>
+      <div class="sec-title">提速学习 + 收操</div>
+      <div class="sec-en">STRIDES &amp; COOLDOWN</div>
+      <div class="sec-meta">约 8 分钟</div>
+    </div>
+    <div class="cool-grid">
+      <div class="cool-left">
+        <div class="ico"><svg viewBox="0 0 48 48"><path d="M6 34 L18 22 L26 30 L42 12"/><path d="M42 24 L42 12 L30 12"/></svg></div>
+        <div><div class="t1">4×15 秒 步幅加速</div><div class="t2">放松非冲刺 · 走 45 秒恢复 · 快≠费力</div></div>
+      </div>
+      <div class="tags">
+        <span class="tag">慢走 2′</span><span class="tag">小腿</span><span class="tag">髋屈肌</span>
+        <span class="tag">股四头</span><span class="tag">腘绳</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 5 HABIT + RULES -->
+  <div class="sec">
+    <div class="sec-head">
+      <div class="sec-num">5</div>
+      <div class="sec-title">习惯养成 &amp; 纪律</div>
+      <div class="sec-en">BUILD THE HABIT</div>
+      <div class="sec-meta">慢就是快</div>
+    </div>
+    <div class="rule-grid">
+      <div class="rule rule-no"><span class="x">✕</span>不追配速</div>
+      <div class="rule rule-no"><span class="x">✕</span>不省热身</div>
+      <div class="rule rule-no"><span class="x">✕</span>不天天加</div>
+      <div class="rule rule-yes"><span class="v">✓</span>每周 ×3</div>
+      <div class="rule rule-yes"><span class="v">✓</span>说话测试</div>
+    </div>
+    <div class="coach">
+      <span class="star">★</span>
+      <span>进阶只有一条线:<b>连续两周不吃力,主课再 +5 分钟</b>;先加"时长"再加"强度"。稳定 8–12 周后,才引入第一堂"稍快"课——<b>地基越厚,后面越快</b>。</span>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="ft">
+    <div class="ft-label"><span class="a">NEXT UP</span><span class="b">如何进阶</span></div>
+    <div class="ft-main">固定时段每周 3 次(如一/三/六晨跑),把跑步变成<b>习惯</b><br>跑姿 5 要点:步频 170–180 · 肩放松 · 微前倾 · 脚落身下 · 不过度跨步</div>
+    <div class="ft-arrow">→</div>
+  </div>
+
+  <div class="credit">
+    <span class="tags-line">#跑步入门&nbsp; #轻松跑&nbsp; #Zone2&nbsp; #有氧地基&nbsp; #养成习惯</span>
+    <span>hyrox-training-plan-skill · 极化 80/20 · 强度纪律</span>
+  </div>
+
+</div>
+</div>
+
+<script>
+(function(){
+  var card=document.getElementById('card');
+  function fit(){
+    var s=Math.min(window.innerWidth/1080,1);
+    card.style.transform='scale('+s+')';
+    card.parentNode.style.height=(1920*s)+'px';
+    card.parentNode.style.overflow='hidden';
+  }
+  fit();
+  window.addEventListener('resize',fit);
+})();
+</script>

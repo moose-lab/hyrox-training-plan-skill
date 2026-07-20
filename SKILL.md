@@ -21,6 +21,7 @@ Before generating a plan, you MUST read the relevant reference files:
 2. `references/periodization-models.json` - How to structure the Base → Build → Peak → Taper phases
 3. `references/session-types.json` - The exact workouts to prescribe (Do not invent random workouts)
 4. `references/race-standards.json` - The exact weights and distances for the user's specific division
+5. `references/output-card-format.md` - The uniform card format for ALL rendered deliverables (Read before formatting output)
 
 ## Workflow for Generating a Plan
 
@@ -56,8 +57,14 @@ Read `race-standards.json` to assign the correct weights for sleds, farmer's car
 - Peak phase: 100% of race weight
 
 ### Step 5: Format the Output
-Generate the final plan in a clear, structured format (Markdown or JSON depending on user request).
-Include the rationale behind the programming, citing the principles from `training-principles.json`.
+All rendered deliverables MUST follow the uniform card format in `references/output-card-format.md`:
+
+- **Weekly overview** → ONE compact card (`txt + html + png`), built from `templates/weekly-overview-card.html`. Target height ≤1700px @1x. No memo long-image.
+- **Daily session** → the established 5-section 1080×1920 card (`txt + html + png`); memo long-image only when the user explicitly asks.
+- **Memo note** (on request) → built from `templates/memo-note.html`: the "why" layer only (card = structure + numbers, memo = one-line reasons). Two profiles share the skeleton — **weekly** (1 line per day ×7) and **daily** (1 line per section ×5: warm-up/main/technique/cooldown/rules). ≤3 logic bullets, no prose paragraphs, height ≤2400px @1x.
+- **Numbers over prose**: word budgets are hard limits (session name ≤10 chars, sub-line ≤14 chars, coach note one line ≤40 chars, no paragraphs on cards). Rationale and full details go in the `.txt` companion, citing principles from `training-principles.json`.
+- **Visual encodings replace text**: phase progress bar, per-day intensity dots, session-mix distribution bar, `old → new` progression chips.
+- Render at 2x via headless Chrome, then verify the PNG for clipping/overflow before delivering.
 
 ## Validation
 

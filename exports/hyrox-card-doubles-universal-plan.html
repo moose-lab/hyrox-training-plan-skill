@@ -1,0 +1,280 @@
+<title>HYROX 双人 · 通用训练计划</title>
+<style>
+  :root{
+    --paper:#F1EFE9;
+    --ink:#121212;
+    --panel:#FFFFFF;
+    --soft:#E7E4DA;
+    --hyx:#FFD900;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html,body{background:var(--paper);}
+  body{font-family:-apple-system,"PingFang SC","Noto Sans SC","Microsoft YaHei",sans-serif;color:var(--ink);}
+  .stage{width:100%;display:flex;justify-content:center;}
+  .card{
+    width:1080px;flex:0 0 auto;
+    background:var(--paper);
+    padding:36px 36px 32px;
+    display:flex;flex-direction:column;gap:18px;
+    font-variant-numeric:tabular-nums;
+  }
+
+  /* ---------- header ---------- */
+  .hd{display:flex;align-items:stretch;gap:20px;}
+  .hd-logo{
+    width:104px;background:var(--ink);border-radius:16px;color:#fff;
+    display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;
+    flex:0 0 auto;
+  }
+  .hd-logo .zh{font-size:34px;font-weight:900;letter-spacing:1px;}
+  .hd-logo .en{font-size:10px;font-weight:700;letter-spacing:1.4px;color:var(--hyx);}
+  .hd-mid{flex:1;display:flex;flex-direction:column;justify-content:center;gap:8px;padding:2px 4px;}
+  .hd-eyebrow{font-size:15px;font-weight:800;letter-spacing:3px;color:#555;}
+  .hd-title{font-size:52px;font-weight:900;letter-spacing:1px;line-height:1.05;text-wrap:balance;}
+  .hd-badges{display:flex;gap:10px;align-items:center;flex-wrap:wrap;}
+  .chip{display:inline-flex;align-items:center;gap:8px;font-size:18px;font-weight:800;
+    padding:6px 14px;border-radius:8px;line-height:1;}
+  .chip-ink{background:var(--ink);color:#fff;}
+  .chip-hyx{background:var(--hyx);color:var(--ink);border:2.5px solid var(--ink);}
+  .hd-date{
+    flex:0 0 auto;min-width:170px;border:3px solid var(--ink);border-radius:14px;background:var(--panel);
+    display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;padding:12px 14px;
+  }
+  .hd-date .d1{font-size:22px;font-weight:900;letter-spacing:.3px;text-align:center;line-height:1.3;}
+  .hd-date .d3{font-size:12.5px;font-weight:800;letter-spacing:1.6px;background:var(--ink);color:#fff;
+    padding:4px 10px;border-radius:6px;margin-top:2px;}
+
+  /* ---------- section shell ---------- */
+  .sec{background:var(--panel);border:3px solid var(--ink);border-radius:16px;padding:18px 24px 20px;}
+  .sec-head{display:flex;align-items:center;gap:14px;margin-bottom:14px;}
+  .sec-num{width:46px;height:46px;background:var(--ink);color:#fff;border-radius:10px;
+    display:flex;align-items:center;justify-content:center;font-size:24px;font-weight:900;flex:0 0 auto;}
+  .sec-title{font-size:28px;font-weight:900;letter-spacing:1px;}
+  .sec-en{font-size:13.5px;font-weight:800;letter-spacing:2px;color:#666;padding-top:7px;}
+  .sec-meta{margin-left:auto;font-size:17px;font-weight:800;background:var(--soft);
+    padding:6px 14px;border-radius:8px;white-space:nowrap;}
+
+  /* ---------- intro strip ---------- */
+  .intro{background:var(--ink);color:#fff;border-radius:16px;padding:18px 24px;
+    display:flex;align-items:center;gap:16px;font-size:18.5px;font-weight:700;line-height:1.5;}
+  .intro b{color:var(--hyx);font-weight:900;}
+  .intro .badge{flex:0 0 auto;background:var(--hyx);color:var(--ink);font-size:16px;font-weight:900;
+    padding:8px 14px;border-radius:8px;letter-spacing:.5px;white-space:nowrap;}
+
+  /* ---------- phase roadmap ---------- */
+  .phase-grid{display:flex;flex-direction:column;gap:10px;}
+  .phase-row{display:flex;align-items:center;gap:16px;background:var(--paper);
+    border:2px solid var(--ink);border-radius:12px;padding:14px 18px;}
+  .phase-badge{flex:0 0 96px;display:flex;flex-direction:column;align-items:center;justify-content:center;
+    background:var(--ink);color:#fff;border-radius:10px;padding:10px 6px;}
+  .phase-badge .nm{font-size:20px;font-weight:900;line-height:1;}
+  .phase-badge .wk{font-size:11.5px;font-weight:700;color:var(--hyx);margin-top:4px;}
+  .phase-body{flex:1;min-width:0;}
+  .phase-body .fc{font-size:19.5px;font-weight:900;}
+  .phase-body .ds{font-size:14.5px;font-weight:600;color:#555;margin-top:3px;}
+  .phase-tags{flex:0 0 auto;display:flex;flex-direction:column;gap:6px;align-items:flex-end;}
+  .phase-tag{font-size:13px;font-weight:800;padding:5px 12px;border-radius:999px;white-space:nowrap;}
+  .phase-tag.load{background:var(--hyx);color:var(--ink);border:2px solid var(--ink);}
+  .phase-tag.zone{background:var(--soft);color:var(--ink);}
+
+  /* ---------- week template grid (reuse day-row) ---------- */
+  .week-grid{display:flex;flex-direction:column;gap:10px;}
+  .day-row{display:flex;align-items:center;gap:16px;background:var(--paper);
+    border:2px solid var(--ink);border-radius:12px;padding:13px 18px;}
+  .day-row.is-rest{background:var(--ink);}
+  .day-badge{flex:0 0 56px;display:flex;align-items:center;justify-content:center;
+    background:var(--ink);color:#fff;border-radius:10px;padding:10px 4px;font-size:22px;font-weight:900;}
+  .day-row.is-rest .day-badge{background:var(--hyx);color:var(--ink);}
+  .day-body{flex:1;min-width:0;}
+  .day-body .nm{font-size:20.5px;font-weight:900;}
+  .day-row.is-rest .day-body .nm{color:#fff;}
+  .day-body .ds{font-size:14.5px;font-weight:600;color:#555;margin-top:2px;}
+  .day-row.is-rest .day-body .ds{color:#ccc;}
+  .day-tag{flex:0 0 auto;font-size:13.5px;font-weight:800;padding:6px 13px;border-radius:999px;white-space:nowrap;}
+  .day-tag.aerobic{background:var(--soft);color:var(--ink);}
+  .day-tag.quality{background:var(--hyx);color:var(--ink);border:2px solid var(--ink);}
+  .day-tag.rest{background:var(--paper);color:var(--ink);}
+
+  /* ---------- rules ---------- */
+  .rule-grid{display:flex;flex-wrap:wrap;gap:12px;}
+  .rule{flex:1 1 45%;display:flex;align-items:center;gap:10px;
+    border-radius:12px;padding:12px 16px;font-size:17.5px;font-weight:800;letter-spacing:.2px;
+    background:var(--paper);border:2px solid var(--ink);}
+  .rule .n{flex:0 0 auto;width:30px;height:30px;background:var(--ink);color:#fff;border-radius:8px;
+    display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:900;}
+  .coach{margin-top:14px;background:var(--paper);border:2px dashed var(--ink);border-radius:10px;
+    padding:12px 16px;display:flex;gap:12px;align-items:flex-start;font-size:18px;font-weight:700;line-height:1.45;}
+  .coach .star{font-size:21px;flex:0 0 auto;}
+  .coach b{font-weight:900;background:linear-gradient(transparent 60%,var(--hyx) 60%);}
+
+  /* ---------- footer ---------- */
+  .ft{background:var(--ink);color:#fff;border-radius:16px;padding:16px 24px;
+    display:flex;align-items:center;gap:18px;}
+  .ft-label{flex:0 0 auto;display:flex;flex-direction:column;gap:2px;}
+  .ft-label .a{font-size:13px;font-weight:800;letter-spacing:2.5px;color:var(--hyx);}
+  .ft-label .b{font-size:22px;font-weight:900;}
+  .ft-main{flex:1;font-size:18.5px;font-weight:700;line-height:1.45;}
+  .ft-main b{font-weight:900;color:var(--hyx);}
+  .ft-arrow{flex:0 0 auto;font-size:32px;font-weight:900;color:var(--hyx);}
+  .credit{display:flex;justify-content:space-between;align-items:center;padding:0 6px;
+    font-size:14px;font-weight:600;color:#666;letter-spacing:.5px;}
+  .credit .tags-line{font-weight:800;color:#333;}
+</style>
+
+<div class="stage">
+<div class="card" id="card">
+
+  <!-- HEADER -->
+  <div class="hd">
+    <div class="hd-logo">
+      <div class="zh">双人</div>
+      <div class="en">ANY PAIRING</div>
+    </div>
+    <div class="hd-mid">
+      <div class="hd-eyebrow">HYROX DOUBLES · UNIVERSAL TEMPLATE</div>
+      <div class="hd-title">双人通用训练计划</div>
+      <div class="hd-badges">
+        <span class="chip chip-hyx">不分男双/女双/混双</span>
+        <span class="chip chip-ink">4阶段周期化</span>
+      </div>
+    </div>
+    <div class="hd-date">
+      <div class="d1">结构通用<br>负重查表</div>
+      <div class="d3">TEMPLATE</div>
+    </div>
+  </div>
+
+  <!-- INTRO STRIP -->
+  <div class="intro">
+    <span class="badge">怎么用</span>
+    <span>这份计划<b>不区分配对性别</b>——6 天课表结构、门槛跑处方、双人战术全部通用。唯一因组别而变的是<b>负重公斤数</b>，男双/女双/混双各不相同（混双固定用 Pro Women 标准），速查表见配套长图便签。</span>
+  </div>
+
+  <!-- PHASE ROADMAP -->
+  <div class="sec">
+    <div class="sec-head">
+      <div class="sec-num">4</div>
+      <div class="sec-title">四阶段路线图</div>
+      <div class="sec-en">PERIODIZATION</div>
+      <div class="sec-meta">以 12 周为例</div>
+    </div>
+    <div class="phase-grid">
+
+      <div class="phase-row">
+        <div class="phase-badge"><div class="nm">Base</div><div class="wk">约3–5周</div></div>
+        <div class="phase-body"><div class="fc">有氧引擎 + 双人动作默契</div><div class="ds">只求动作对，不追速度；确立分工模式</div></div>
+        <div class="phase-tags"><span class="phase-tag load">60–70% 赛重</span><span class="phase-tag zone">90/10</span></div>
+      </div>
+
+      <div class="phase-row">
+        <div class="phase-badge"><div class="nm">Build</div><div class="wk">约4–5周</div></div>
+        <div class="phase-body"><div class="fc">门槛强度 + 力量耐力 + 带疲劳跑</div><div class="ds">负重逐周上探；交接效率优化</div></div>
+        <div class="phase-tags"><span class="phase-tag load">70→100% 赛重</span><span class="phase-tag zone">80/20</span></div>
+      </div>
+
+      <div class="phase-row">
+        <div class="phase-badge"><div class="nm">Peak</div><div class="wk">约2–3周</div></div>
+        <div class="phase-body"><div class="fc">比赛配速演练 + 全场/半场模拟</div><div class="ds">完整比赛日彩排，含交接与分工</div></div>
+        <div class="phase-tags"><span class="phase-tag load">100% 赛重</span><span class="phase-tag zone">75/25</span></div>
+      </div>
+
+      <div class="phase-row">
+        <div class="phase-badge"><div class="nm">Taper</div><div class="wk">约1–2周</div></div>
+        <div class="phase-body"><div class="fc">减量不减强度，养精蓄锐</div><div class="ds">复盘分工方案，双人默契最后确认</div></div>
+        <div class="phase-tags"><span class="phase-tag load">80–90% 赛重</span><span class="phase-tag zone">85/15</span></div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- WEEKLY TEMPLATE -->
+  <div class="sec">
+    <div class="sec-head">
+      <div class="sec-num">7</div>
+      <div class="sec-title">通用周模板</div>
+      <div class="sec-en">WEEKLY TEMPLATE</div>
+      <div class="sec-meta">6 课 + 1 休 · 各阶段共用</div>
+    </div>
+    <div class="week-grid">
+      <div class="day-row">
+        <div class="day-badge">一</div>
+        <div class="day-body"><div class="nm">Zone 2 轻松跑</div><div class="ds">40–50 分钟 · 有氧地基</div></div>
+        <div class="day-tag aerobic">有氧</div>
+      </div>
+      <div class="day-row">
+        <div class="day-badge">二</div>
+        <div class="day-body"><div class="nm">站台复合 + 带疲劳跑</div><div class="ds">双人分摊 · 负重按阶段/组别代入</div></div>
+        <div class="day-tag quality">质量日</div>
+      </div>
+      <div class="day-row">
+        <div class="day-badge">三</div>
+        <div class="day-body"><div class="nm">门槛跑 5×1km @10km配速</div><div class="ds">组间慢跑90–120s · VO2max杠杆</div></div>
+        <div class="day-tag quality">质量日</div>
+      </div>
+      <div class="day-row">
+        <div class="day-badge">四</div>
+        <div class="day-body"><div class="nm">力量耐力循环</div><div class="ds">4轮 · 组间休60–90秒</div></div>
+        <div class="day-tag aerobic">力量</div>
+      </div>
+      <div class="day-row">
+        <div class="day-badge">五</div>
+        <div class="day-body"><div class="nm">Zone 2 轻松跑 / 恢复</div><div class="ds">30–40 分钟 · 很轻松</div></div>
+        <div class="day-tag aerobic">有氧</div>
+      </div>
+      <div class="day-row">
+        <div class="day-badge">六</div>
+        <div class="day-body"><div class="nm">长距离有氧跑</div><div class="ds">60–75 分钟 · 每3–4周可换全场模拟</div></div>
+        <div class="day-tag aerobic">有氧</div>
+      </div>
+      <div class="day-row is-rest">
+        <div class="day-badge">日</div>
+        <div class="day-body"><div class="nm">完全休息</div><div class="ds">超量恢复 · 神经系统重置</div></div>
+        <div class="day-tag rest">休息</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- RULES -->
+  <div class="sec">
+    <div class="sec-head">
+      <div class="sec-num">8</div>
+      <div class="sec-title">不可违背的原则</div>
+      <div class="sec-en">CORE PRINCIPLES</div>
+      <div class="sec-meta">不分配对,全部适用</div>
+    </div>
+    <div class="rule-grid">
+      <div class="rule"><span class="n">P1</span>有氧占比 ≥60%</div>
+      <div class="rule"><span class="n">P2</span>门槛跑每周≥1次</div>
+      <div class="rule"><span class="n">P3</span>每周增量 ≤10%</div>
+      <div class="rule"><span class="n">P4</span>四阶段周期化</div>
+      <div class="rule"><span class="n">P5</span>力量硬跑隔≥6h</div>
+      <div class="rule"><span class="n">P6</span>带疲劳跑每周≥1次</div>
+      <div class="rule"><span class="n">P7</span>每3–4周减量一次</div>
+      <div class="rule"><span class="n">P8</span>强度分布80/20极化</div>
+    </div>
+    <div class="coach">
+      <span class="star">★</span>
+      <span>怎么用这份模板：先确定你的<b>配对组别</b>(男双/女双/混双,查配套便签里的速查表代入公斤数),再确定现在处于<b>哪个阶段</b>(查上方路线图),周模板 7 天照抄即可。</span>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="ft">
+    <div class="ft-label"><span class="a">GO DEEPER</span><span class="b">配套便签</span></div>
+    <div class="ft-main">双人专项战术(分工/交接/配速同步/疲劳沟通/心理协作)<br>+ 负重速查表(男双·女双·混双·Open·Pro全覆盖)，见长图便签</div>
+    <div class="ft-arrow">→</div>
+  </div>
+
+  <div class="credit">
+    <span class="tags-line">#HYROX&nbsp; #双人&nbsp; #通用训练计划&nbsp; #男双&nbsp; #女双&nbsp; #混双</span>
+    <span>hyrox-training-plan-skill · 阶段化 P4 · 双人专项战术</span>
+  </div>
+
+</div>
+</div>
+
+<script>
+  addEventListener('load',function(){
+    document.body.setAttribute('data-h',Math.ceil(document.getElementById('card').getBoundingClientRect().height));
+  });
+</script>

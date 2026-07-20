@@ -1,0 +1,97 @@
+<!-- HYROX memo note · uniform template (teaching companion, sticky-note identity)
+     Role: the "why" layer — card carries structure+numbers, memo carries one-line reasons.
+     TWO PROFILES sharing this skeleton (only the WHY rows differ):
+       weekly — LOGIC=本周逻辑, WHY=每天1行×7, chip=周几+日期, yellow chip=rest day, NEXT=next week
+       daily  — LOGIC=今日逻辑, WHY=每段1行×5(热身/主课/技巧/冷身/纪律), chip=①–⑤+时长或RPE,
+                yellow chip("rest" class)=主课行, NEXT=tomorrow's session
+     Budgets: every line ≤26 chars · exactly 1 row per day/section · ≤3 logic bullets ·
+     coach 1 line ≤40 chars · target height ≤2400px @1x. Delete comments in output. -->
+<title>{{PAGE_TITLE}}</title>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{background:#EFEDE6;font-family:-apple-system,"PingFang SC","Noto Sans SC","Microsoft YaHei",sans-serif;
+    font-variant-numeric:tabular-nums;}
+  .wrap{width:1080px;padding:52px 48px 56px;}
+  .note{position:relative;width:100%;background:#FFFDF6;border-radius:22px;
+    box-shadow:0 12px 44px rgba(25,23,15,.10),0 2px 10px rgba(25,23,15,.06);
+    padding:74px 62px 46px;}
+  .tape{position:absolute;top:-20px;left:50%;transform:translateX(-50%) rotate(-2deg);
+    width:236px;height:46px;background:rgba(255,217,0,.82);border-radius:5px;
+    box-shadow:0 2px 8px rgba(0,0,0,.10);}
+  .tape::after{content:"";position:absolute;inset:0;
+    background:repeating-linear-gradient(90deg,rgba(255,255,255,.14) 0 3px,transparent 3px 9px);}
+
+  .title{font-size:38px;font-weight:800;color:#1e1c17;}
+  .date{font-size:22px;color:#8d8776;margin-top:10px;font-weight:600;}
+  .mcap{font-size:14.5px;font-weight:800;letter-spacing:2.5px;color:#9a9484;
+    margin:30px 0 8px;display:flex;justify-content:space-between;}
+  .mcap b{color:#1e1c17;}
+
+  /* logic bullets (≤3) */
+  .lrow{display:flex;gap:12px;align-items:baseline;padding:7px 0;font-size:23px;
+    color:#28251e;font-weight:500;line-height:1.5;}
+  .lrow .sq{flex:0 0 12px;width:12px;height:12px;background:#1e1c17;border-radius:3px;
+    align-self:center;}
+  .lrow b{font-weight:800;background:linear-gradient(transparent 58%,rgba(255,217,0,.6) 58%);}
+
+  /* per-day rows (exactly 7) */
+  .drow{display:flex;align-items:center;gap:14px;padding:11px 0;
+    border-bottom:2px dashed #E8E2D0;}
+  .drow:last-child{border-bottom:none;}
+  .dchip{flex:0 0 84px;background:#1e1c17;color:#fff;border-radius:9px;text-align:center;
+    padding:7px 0;font-size:16.5px;font-weight:900;}
+  .dchip i{font-style:normal;font-size:12px;color:#FFD900;font-weight:700;display:block;margin-top:1px;}
+  .drow.rest .dchip{background:#FFD900;color:#1e1c17;}
+  .drow.rest .dchip i{color:#1e1c17;}
+  .dname{flex:0 0 200px;font-size:22px;font-weight:800;color:#1e1c17;}
+  .dwhy{flex:1;font-size:20.5px;color:#6b6552;font-weight:600;line-height:1.45;}
+  .dwhy b{color:#28251e;font-weight:800;background:linear-gradient(transparent 58%,rgba(255,217,0,.6) 58%);}
+
+  /* coach one-liner */
+  .coach{background:#FFF6CF;border-radius:12px;padding:16px 22px;margin-top:30px;
+    font-size:22px;font-weight:700;color:#28251e;line-height:1.5;}
+  .coach b{background:linear-gradient(transparent 58%,rgba(255,217,0,.75) 58%);font-weight:800;}
+
+  /* next line */
+  .next{margin-top:24px;font-size:22px;font-weight:800;color:#1e1c17;}
+  .next .lb{font-size:13px;letter-spacing:2.5px;color:#9a9484;font-weight:800;margin-right:12px;}
+  .next b{background:linear-gradient(transparent 58%,rgba(255,217,0,.6) 58%);}
+
+  .tags{margin-top:30px;font-size:20px;font-weight:600;color:#9a9484;}
+  .credit{margin-top:18px;display:flex;justify-content:space-between;
+    font-size:17px;color:#B4AE9C;font-weight:500;}
+</style>
+
+<div class="wrap">
+  <div class="note">
+    <div class="tape"></div>
+
+    <div class="title">{{TITLE}}</div>
+    <div class="date">{{DATE_LINE}}</div>
+
+    <div class="mcap"><span><b>LOGIC</b> · 本周逻辑</span><span>{{LOGIC_META}}</span></div>
+    <!-- ≤3 bullets, bold lead ≤8字 + tail ≤18字 -->
+    <div class="lrow"><span class="sq"></span><span><b>{{LEAD}}</b>:{{TAIL}}</span></div>
+
+    <div class="mcap"><span><b>WHY</b> · 逐日一句</span><span>{{WHY_META}}</span></div>
+    <!-- exactly 7 rows, why ≤20字; rest day gets class "drow rest" -->
+    <div class="drow">
+      <span class="dchip">{{DOW}}<i>{{DATE}}</i></span>
+      <span class="dname">{{SESSION}}</span>
+      <span class="dwhy">{{WHY_ONE_LINE}}</span>
+    </div>
+
+    <div class="coach">★ {{COACH_ONE_LINER_MAX40}}</div>
+
+    <div class="next"><span class="lb">NEXT</span>{{NEXT_NUMBERS}}</div>
+
+    <div class="tags">{{HASHTAGS}}</div>
+    <div class="credit"><span>{{CREDIT_LEFT}}</span><span>hyrox-training-plan-skill</span></div>
+  </div>
+</div>
+
+<script>
+  addEventListener('load',function(){
+    document.body.setAttribute('data-h',Math.ceil(document.body.scrollHeight));
+  });
+</script>

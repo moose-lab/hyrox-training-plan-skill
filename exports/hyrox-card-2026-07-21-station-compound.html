@@ -1,0 +1,293 @@
+<title>HYROX 混双 · 7/21 站台复合训练卡</title>
+<style>
+  :root{
+    --paper:#F1EFE9;
+    --ink:#121212;
+    --panel:#FFFFFF;
+    --soft:#E7E4DA;
+    --hyx:#FFD900;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html,body{background:var(--paper);}
+  body{font-family:-apple-system,"PingFang SC","Noto Sans SC","Microsoft YaHei",sans-serif;color:var(--ink);}
+  .stage{width:100%;display:flex;justify-content:center;}
+  .card{
+    width:1080px;height:1920px;flex:0 0 auto;
+    background:var(--paper);
+    padding:36px 36px 32px;
+    display:flex;flex-direction:column;gap:20px;justify-content:space-between;
+    transform-origin:top left;
+    font-variant-numeric:tabular-nums;
+  }
+
+  /* ---------- header ---------- */
+  .hd{display:flex;align-items:stretch;gap:20px;}
+  .hd-logo{
+    width:104px;background:var(--ink);border-radius:16px;color:#fff;
+    display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;
+    flex:0 0 auto;
+  }
+  .hd-logo .zh{font-size:36px;font-weight:900;letter-spacing:2px;}
+  .hd-logo .en{font-size:10.5px;font-weight:700;letter-spacing:1.6px;color:var(--hyx);}
+  .hd-mid{flex:1;display:flex;flex-direction:column;justify-content:center;gap:8px;padding:2px 4px;}
+  .hd-eyebrow{font-size:15px;font-weight:800;letter-spacing:3.5px;color:#555;}
+  .hd-title{font-size:60px;font-weight:900;letter-spacing:2px;line-height:1.05;text-wrap:balance;}
+  .hd-badges{display:flex;gap:10px;align-items:center;}
+  .chip{display:inline-flex;align-items:center;gap:8px;font-size:19px;font-weight:800;
+    padding:6px 14px;border-radius:8px;line-height:1;}
+  .chip-ink{background:var(--ink);color:#fff;}
+  .chip-hyx{background:var(--hyx);color:var(--ink);border:2.5px solid var(--ink);}
+  .hd-date{
+    flex:0 0 auto;min-width:214px;border:3px solid var(--ink);border-radius:14px;background:var(--panel);
+    display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;padding:12px 16px;
+  }
+  .hd-date .d1{font-size:37px;font-weight:900;letter-spacing:1px;}
+  .hd-date .d2{font-size:15px;font-weight:700;color:#444;}
+  .hd-date .d3{font-size:13px;font-weight:800;letter-spacing:1.8px;background:var(--ink);color:#fff;
+    padding:4px 10px;border-radius:6px;margin-top:2px;}
+
+  /* ---------- section shell ---------- */
+  .sec{background:var(--panel);border:3px solid var(--ink);border-radius:16px;padding:18px 24px 20px;}
+  .sec-head{display:flex;align-items:center;gap:14px;margin-bottom:14px;}
+  .sec-num{width:46px;height:46px;background:var(--ink);color:#fff;border-radius:10px;
+    display:flex;align-items:center;justify-content:center;font-size:27px;font-weight:900;flex:0 0 auto;}
+  .sec-title{font-size:31px;font-weight:900;letter-spacing:1px;}
+  .sec-en{font-size:14.5px;font-weight:800;letter-spacing:2.2px;color:#666;padding-top:8px;}
+  .sec-meta{margin-left:auto;font-size:19px;font-weight:800;background:var(--soft);
+    padding:6px 14px;border-radius:8px;white-space:nowrap;}
+
+  .ico{width:46px;height:46px;flex:0 0 auto;}
+  .ico svg{width:100%;height:100%;stroke:var(--ink);fill:none;stroke-width:7;stroke-linecap:round;stroke-linejoin:round;}
+
+  /* ---------- warmup ---------- */
+  .row-items{display:flex;gap:16px;}
+  .item{flex:1;display:flex;align-items:center;gap:14px;background:var(--paper);
+    border:2px solid var(--ink);border-radius:12px;padding:12px 16px;}
+  .item .t1{font-size:23px;font-weight:800;line-height:1.25;}
+  .item .t2{font-size:15.5px;font-weight:600;color:#555;margin-top:2px;}
+
+  /* ---------- main set ---------- */
+  .main-grid{display:flex;gap:24px;align-items:stretch;}
+  .main-num{flex:0 0 auto;display:flex;flex-direction:column;justify-content:center;align-items:center;
+    padding:6px 10px 2px;}
+  .bignum{font-size:104px;font-weight:900;line-height:.95;letter-spacing:-2px;
+    background:linear-gradient(transparent 62%,var(--hyx) 62%);padding:0 8px;}
+  .bignum-unit{font-size:18px;font-weight:900;letter-spacing:3px;margin-top:8px;text-align:center;}
+  .main-pts{flex:1;display:flex;flex-direction:column;justify-content:center;gap:11px;}
+  .pt{display:flex;align-items:center;gap:12px;font-size:23px;font-weight:700;}
+  .pt .bullet{width:13px;height:13px;background:var(--ink);border-radius:3px;flex:0 0 auto;}
+  .pt b{font-weight:900;}
+  .pt .sub{font-size:17px;color:#555;font-weight:600;}
+
+  /* ---------- anchors ---------- */
+  .anchor-grid{display:flex;gap:16px;}
+  .anchor{flex:1;border:2px solid var(--ink);border-radius:12px;background:var(--paper);
+    padding:14px 14px 12px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:8px;}
+  .anchor .nm{font-size:23px;font-weight:900;}
+  .anchor .ds{font-size:16.5px;font-weight:600;color:#444;line-height:1.4;}
+  .strip{margin-top:14px;background:var(--soft);border-radius:10px;padding:11px 16px;
+    display:flex;align-items:center;gap:12px;font-size:19px;font-weight:700;line-height:1.4;}
+  .strip .mk{font-size:22px;flex:0 0 auto;}
+  .strip b{font-weight:900;}
+
+  /* ---------- cooldown ---------- */
+  .cool-grid{display:flex;gap:16px;align-items:center;}
+  .cool-left{flex:0 0 300px;display:flex;align-items:center;gap:14px;background:var(--paper);
+    border:2px solid var(--ink);border-radius:12px;padding:12px 16px;}
+  .tags{flex:1;display:flex;flex-wrap:wrap;gap:9px;}
+  .tag{font-size:19.5px;font-weight:800;border:2px solid var(--ink);border-radius:999px;
+    padding:7px 16px;background:var(--panel);}
+
+  /* ---------- rules ---------- */
+  .rule-grid{display:flex;gap:14px;}
+  .rule{flex:1;display:flex;align-items:center;justify-content:center;gap:10px;
+    border-radius:12px;padding:13px 8px;font-size:22px;font-weight:900;letter-spacing:1px;}
+  .rule-no{background:var(--ink);color:#fff;}
+  .rule-no .x{color:var(--hyx);font-size:24px;}
+  .rule-yes{background:var(--paper);border:2px solid var(--ink);}
+  .rule-yes .v{font-size:24px;}
+  .coach{margin-top:14px;background:var(--paper);border:2px dashed var(--ink);border-radius:10px;
+    padding:12px 16px;display:flex;gap:12px;align-items:flex-start;font-size:19.5px;font-weight:700;line-height:1.45;}
+  .coach .star{font-size:22px;flex:0 0 auto;}
+  .coach b{font-weight:900;background:linear-gradient(transparent 60%,var(--hyx) 60%);}
+
+  /* ---------- footer ---------- */
+  .ft{background:var(--ink);color:#fff;border-radius:16px;padding:16px 24px;
+    display:flex;align-items:center;gap:18px;}
+  .ft-label{flex:0 0 auto;display:flex;flex-direction:column;gap:2px;}
+  .ft-label .a{font-size:13px;font-weight:800;letter-spacing:2.5px;color:var(--hyx);}
+  .ft-label .b{font-size:24px;font-weight:900;}
+  .ft-main{flex:1;font-size:21px;font-weight:700;line-height:1.45;}
+  .ft-main b{font-weight:900;color:var(--hyx);}
+  .ft-arrow{flex:0 0 auto;font-size:34px;font-weight:900;color:var(--hyx);}
+  .credit{display:flex;justify-content:space-between;align-items:center;padding:0 6px;
+    font-size:14.5px;font-weight:600;color:#666;letter-spacing:.5px;}
+  .credit .tags-line{font-weight:800;color:#333;}
+</style>
+
+<div class="stage">
+<div class="card" id="card">
+
+  <!-- HEADER -->
+  <div class="hd">
+    <div class="hd-logo">
+      <div class="zh">混双</div>
+      <div class="en">HYROX DOUBLES</div>
+    </div>
+    <div class="hd-mid">
+      <div class="hd-eyebrow">HYROX MIXED DOUBLES · BUILD W2</div>
+      <div class="hd-title">站台复合计划</div>
+      <div class="hd-badges">
+        <span class="chip chip-hyx">质量日①</span>
+        <span class="chip chip-ink">本周唯一加重量</span>
+      </div>
+    </div>
+    <div class="hd-date">
+      <div class="d1">7月21日</div>
+      <div class="d2">星期二 · July 21st, Tue</div>
+      <div class="d3">STATION</div>
+    </div>
+  </div>
+
+  <!-- 1 WARMUP -->
+  <div class="sec">
+    <div class="sec-head">
+      <div class="sec-num">1</div>
+      <div class="sec-title">热身 · 质量课不能省</div>
+      <div class="sec-en">WARM-UP</div>
+      <div class="sec-meta">15–18 分钟</div>
+    </div>
+    <div class="row-items">
+      <div class="item">
+        <div class="ico"><svg viewBox="0 0 48 48"><circle cx="27" cy="8" r="4.5"/><path d="M26 14 L20 26 L20 40"/><path d="M26 14 L30 24 L28 40"/><path d="M26 16 L34 20"/><path d="M25 18 L17 22"/></svg></div>
+        <div><div class="t1">慢跑 8–10 分钟 + 动态激活</div><div class="t2">腿摆 · 髋环绕 · A-skip ×20 步</div></div>
+      </div>
+      <div class="item">
+        <div class="ico"><svg viewBox="0 0 48 48"><path d="M6 34 L18 22 L26 30 L42 12"/><path d="M42 24 L42 12 L30 12"/></svg></div>
+        <div><div class="t1">空载预演 + 加速跑 4×20″</div><div class="t2">空推拉雪橇 20m · Ski 200m · 末组摸配速</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2 MAIN -->
+  <div class="sec">
+    <div class="sec-head">
+      <div class="sec-num">2</div>
+      <div class="sec-title">主课 · 站台复合+带疲劳跑</div>
+      <div class="sec-en">MAIN SET</div>
+      <div class="sec-meta">RPE 7–8 / 10</div>
+    </div>
+    <div class="main-grid">
+      <div class="main-num">
+        <div class="bignum">×2</div>
+        <div class="bignum-unit">轮 · 轮间休 3–4′</div>
+      </div>
+      <div class="main-pts">
+        <div class="pt"><span class="bullet"></span><span><b>Ski 1000m→推 50m→跑 1km→拉 50m→跑 1km</b></span></div>
+        <div class="pt"><span class="bullet"></span><span>负重 <b>85–90% 赛重</b>&nbsp;<span class="sub">推 ≈130–137kg · 拉 ≈88–93kg</span></span></div>
+        <div class="pt"><span class="bullet"></span><span>双人分摊:<b>强项多担</b>&nbsp;<span class="sub">谁推得动谁多推</span></span></div>
+        <div class="pt"><span class="bullet"></span><span>跑段<b>压门槛以下、匀速</b>&nbsp;<span class="sub">比冲刺追分更快</span></span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3 TRANSITIONS -->
+  <div class="sec">
+    <div class="sec-head">
+      <div class="sec-num">3</div>
+      <div class="sec-title">转换三招</div>
+      <div class="sec-en">STATION → RUN</div>
+      <div class="sec-meta">出站找回跑姿</div>
+    </div>
+    <div class="anchor-grid">
+      <div class="anchor">
+        <div class="ico"><svg viewBox="0 0 48 48"><path d="M6 26 q8 -9 16 0 t16 0"/><path d="M6 36 q8 -9 16 0 t16 0"/><path d="M24 16 v-8 M24 8 l-4 4 M24 8 l4 4"/></svg></div>
+        <div class="nm">呼吸法</div>
+        <div class="ds">出站前深呼吸 ×2<br>重置节奏</div>
+      </div>
+      <div class="anchor">
+        <div class="ico"><svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="19"/><path d="M24 13 v11 l8 5"/></svg></div>
+        <div class="nm">减速法</div>
+        <div class="ds">前 100m 主动放慢<br>找回跑姿再提速</div>
+      </div>
+      <div class="anchor">
+        <div class="ico"><svg viewBox="0 0 48 48"><circle cx="27" cy="8" r="4.5"/><path d="M26 14 L20 26 L20 40"/><path d="M26 14 L30 24 L28 40"/><path d="M26 16 L34 20"/><path d="M25 18 L17 22"/></svg></div>
+        <div class="nm">步频法</div>
+        <div class="ds">缩短步幅提步频<br>不大跨步</div>
+      </div>
+    </div>
+    <div class="strip">
+      <span class="mk">◎</span>
+      <span><b>混双加成：</b>一人出站快、一人稳配速，轮流领跑追回节奏——交接口令喊出来，器械不落地。</span>
+    </div>
+  </div>
+
+  <!-- 4 COOLDOWN -->
+  <div class="sec">
+    <div class="sec-head">
+      <div class="sec-num">4</div>
+      <div class="sec-title">冷身与拉伸</div>
+      <div class="sec-en">COOLDOWN &amp; MOBILITY</div>
+      <div class="sec-meta">12–15 分钟</div>
+    </div>
+    <div class="cool-grid">
+      <div class="cool-left">
+        <div class="ico"><svg viewBox="0 0 48 48"><circle cx="24" cy="7" r="4.5"/><path d="M24 12 V28"/><path d="M24 15 L12 8"/><path d="M24 15 L36 22"/><path d="M24 28 L14 40"/><path d="M24 28 L34 40"/></svg></div>
+        <div><div class="t1">慢跑 8–10 分钟</div><div class="t2">心率缓降，代谢乳酸</div></div>
+      </div>
+      <div class="tags">
+        <span class="tag">髋屈肌</span><span class="tag">股四头</span><span class="tag">小腿</span>
+        <span class="tag">肩背</span><span class="tag">前臂</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 5 RULES -->
+  <div class="sec">
+    <div class="sec-head">
+      <div class="sec-num">5</div>
+      <div class="sec-title">今日纪律</div>
+      <div class="sec-en">RULES OF THE DAY</div>
+      <div class="sec-meta">站台省秒 ≠ 跑段亏秒</div>
+    </div>
+    <div class="rule-grid">
+      <div class="rule rule-no"><span class="x">✕</span>不冲单站</div>
+      <div class="rule rule-no"><span class="x">✕</span>不省转换</div>
+      <div class="rule rule-no"><span class="x">✕</span>不追站PB</div>
+      <div class="rule rule-yes"><span class="v">✓</span>90%匀速</div>
+      <div class="rule rule-yes"><span class="v">✓</span>课前补碳</div>
+    </div>
+    <div class="coach">
+      <span class="star">★</span>
+      <span>指导：站台成绩和总成绩几乎不相关，<b>跑步才相关</b>（AP4）。站台省 10 秒、跑段崩 40 秒是血亏——<b>带疲劳还能跑好，才是分水岭</b>。</span>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="ft">
+    <div class="ft-label"><span class="a">NEXT UP</span><span class="b">明日预告</span></div>
+    <div class="ft-main">7月22日（周三）<b>门槛跑 5×1km @10km 配速</b>，恢复 75–105″<br>本周唯一"缩恢复"的课 · 周四力量耐力</div>
+    <div class="ft-arrow">→</div>
+  </div>
+
+  <div class="credit">
+    <span class="tags-line">#HYROX&nbsp; #混双&nbsp; #站台复合&nbsp; #带疲劳跑&nbsp; #BuildW2</span>
+    <span>hyrox-training-plan-skill · 带疲劳跑 P6 · 有氧主导 P1</span>
+  </div>
+
+</div>
+</div>
+
+<script>
+(function(){
+  var card=document.getElementById('card');
+  function fit(){
+    var s=Math.min(window.innerWidth/1080,1);
+    card.style.transform='scale('+s+')';
+    card.parentNode.style.height=(1920*s)+'px';
+    card.parentNode.style.overflow='hidden';
+  }
+  fit();
+  window.addEventListener('resize',fit);
+})();
+</script>
