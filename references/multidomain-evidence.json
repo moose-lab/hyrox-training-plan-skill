@@ -1,0 +1,213 @@
+{
+  "metadata": {
+    "version": "2.0",
+    "created": "2026-08-13",
+    "purpose": "Evidence-bounded nutrition, sleep, recovery, injury-risk, and supplement guidance for HYROX planning agents",
+    "evidence_labels": {
+      "HYROX_DIRECT": "Official HYROX standards or research in HYROX athletes/simulated HYROX settings.",
+      "TRANSFER_EVIDENCE": "Research from adjacent endurance, resistance, concurrent-training, or athlete populations; useful but not proven specifically in HYROX.",
+      "COACH_PRACTICE": "A bounded method from a credentialed coach or athlete transcript; never causal proof or a universal rule.",
+      "CLINICAL_REFERRAL": "Topic requiring a qualified clinician, registered dietitian, or sports-medicine professional rather than agent prescription."
+    }
+  },
+  "domains": {
+    "nutrition": {
+      "required_inputs_before_personalization": [
+        "body_mass_kg if using body-mass-relative education",
+        "session_duration_and_intensity",
+        "race_or_training_context",
+        "dietary_restrictions_and_preferences",
+        "known_gastrointestinal_tolerance",
+        "medical_conditions_medications_pregnancy_or_eating_disorder_history",
+        "whether a registered_sports_dietitian is involved"
+      ],
+      "evidence_bounded_guidance": [
+        {
+          "claim": "Extended high-intensity exercise exceeding approximately 60 minutes can challenge fuel and fluid regulation; carbohydrate intake during the session is a test-in-training option rather than a mandatory HYROX rule.",
+          "evidence_label": "TRANSFER_EVIDENCE",
+          "operational_use": "For sessions and races likely to exceed 60 minutes, ask whether the athlete has previously tolerated carbohydrate during running/erg/station work. If not, propose a low-risk practice trial and record GI response rather than assigning a fixed dose.",
+          "do_not_infer": "Do not state that every HYROX athlete requires a specific grams-per-hour target or that any intake guarantees performance.",
+          "source_url": "https://doi.org/10.1186/s12970-017-0189-4"
+        },
+        {
+          "claim": "Total daily nutrition and appropriately distributed protein are more important than a rigid post-workout anabolic window; rapid carbohydrate restoration matters most when a demanding session follows within about four hours.",
+          "evidence_label": "TRANSFER_EVIDENCE",
+          "operational_use": "When two demanding sessions are close together, flag recovery fueling as a planning consideration. Otherwise prioritize regular meals, adequate energy availability, and dietitian-guided personalization.",
+          "do_not_infer": "Do not diagnose low energy availability, prescribe calorie floors, or require immediate post-session supplements.",
+          "source_url": "https://doi.org/10.1186/s12970-017-0189-4"
+        },
+        {
+          "claim": "Athletes should trial race food and fluid in training or simulated competition before race day.",
+          "evidence_label": "COACH_PRACTICE",
+          "operational_use": "Include an optional fueling-practice note in longer simulations and record food, fluid, timing, and GI tolerance.",
+          "do_not_infer": "Do not make a commercial gel, drink, or product brand part of the plan.",
+          "source_url": "https://www.youtube.com/watch?v=9q17kRcVLaQ"
+        }
+      ],
+      "referral_flags": [
+        "unintentional_weight_change_or_recurrent_low_energy",
+        "suspected_disordered_eating",
+        "persistent_gastrointestinal_symptoms",
+        "pregnancy_or_postpartum",
+        "diabetes_or_other_condition_affecting_fueling",
+        "iron_deficiency_or_other_known_micronutrient_deficiency"
+      ]
+    },
+    "sleep_and_recovery": {
+      "required_inputs_before_personalization": [
+        "typical_sleep_duration_and_consistency",
+        "recent_sleep_disruption_or_travel",
+        "subjective_readiness_soreness_and_stress",
+        "training_schedule_and_competition_time",
+        "persistent_sleep_symptoms_or_clinical_diagnosis"
+      ],
+      "evidence_bounded_guidance": [
+        {
+          "claim": "Athlete sleep needs and responses to sleep interventions are individual; habitual short sleep below seven hours/night is a recognized marker of sleep inadequacy, but a universal sleep-duration target is not ideal.",
+          "evidence_label": "TRANSFER_EVIDENCE",
+          "operational_use": "Ask the athlete to monitor a simple 7-14 day sleep trend. If sleep is repeatedly curtailed or sleep quality is poor, reduce optional training stress and surface a coach-review flag.",
+          "do_not_infer": "Do not prescribe a universal 9-hour target, diagnose insomnia, or claim that one poor night requires an automatic missed session.",
+          "source_url": "https://doi.org/10.1136/bjsports-2020-102025"
+        },
+        {
+          "claim": "Long-term sleep behavior, sleep education, screening, and management of travel/competition risks are supported practical priorities; consumer wearables have measurement limitations.",
+          "evidence_label": "TRANSFER_EVIDENCE",
+          "operational_use": "Use self-reported sleep and a wearable only as trend inputs. Offer low-impact alternatives or extra recovery time after a pattern of poor sleep, especially before high-intensity or high-impact work.",
+          "do_not_infer": "Do not interpret a wearable sleep score as a clinical diagnosis or objective clearance to train.",
+          "source_url": "https://doi.org/10.1136/bjsports-2020-102025"
+        }
+      ],
+      "clinical_referral_flags": [
+        "sleep_problem_persisting_more_than_two_weeks",
+        "daytime_sleepiness_or_falling_asleep_inappropriately",
+        "suspected_sleep_apnea_or_loud_snoring",
+        "insomnia_symptoms_with_distress",
+        "depressed_mood_or_anxiety_or_overtraining_concern"
+      ]
+    },
+    "load_management_and_injury_risk": {
+      "required_inputs_before_personalization": [
+        "recent_running_and_strength_load",
+        "training_age_and_current_frequency",
+        "pain_location_severity_and_duration",
+        "prior_injury_and_current_restrictions",
+        "session_rpe_and_subjective_readiness",
+        "equipment_access_and_surface"
+      ],
+      "evidence_bounded_guidance": [
+        {
+          "claim": "Load management combines progressive overload, specificity, variation, individuality, recovery, and avoidance of prolonged underloading; it is not synonymous with rest.",
+          "evidence_label": "TRANSFER_EVIDENCE",
+          "operational_use": "Progress one primary variable at a time where possible (volume, density, load, or race specificity), include lower-stress sessions, and compare athlete response to prior weeks.",
+          "do_not_infer": "Do not use a single ACWR cutoff, a fixed 10% rule, or a single biomarker to predict injury or automate a medical decision.",
+          "source_url": "https://doi.org/10.1177/19417381231179946"
+        },
+        {
+          "claim": "Strength-training interventions reduced sports injuries in a meta-analysis, but the trials were not HYROX-specific and do not specify a universal program for hybrid racers.",
+          "evidence_label": "TRANSFER_EVIDENCE",
+          "operational_use": "Retain appropriately dosed strength work for tissue capacity and movement quality, while adjusting it around high-impact running and station sessions.",
+          "do_not_infer": "Do not claim that strength training prevents a particular injury or prescribe return-to-sport criteria after injury.",
+          "source_url": "https://doi.org/10.1136/bjsports-2018-099078"
+        },
+        {
+          "claim": "Deloading practice is common in strength sports, but the research is observational and not HYROX-specific.",
+          "evidence_label": "TRANSFER_EVIDENCE",
+          "operational_use": "Present a planned or response-based lower-stress week as an adjustable option when fatigue, joint soreness, life stress, or performance trend warrants review.",
+          "do_not_infer": "Do not mandate a universal deload calendar or presume a fixed volume reduction is superior for every athlete.",
+          "source_url": "https://doi.org/10.1186/s40798-024-00691-y"
+        }
+      ],
+      "clinical_referral_flags": [
+        "acute_injury_or_sudden_swelling",
+        "pain_that_changes_running_gait_or_station_technique",
+        "chest_pain_fainting_or_unexplained_breathlessness",
+        "progressively_worsening_pain",
+        "persistent_underperformance_with_mood_sleep_or_systemic_symptoms"
+      ]
+    },
+    "supplements": {
+      "required_inputs_before_education": [
+        "age_and_eligibility",
+        "medical_conditions_and_medications",
+        "pregnancy_or_breastfeeding_status",
+        "anti_doping_obligations",
+        "prior_tolerance_and_sleep_sensitivity",
+        "qualified_dietitian_or_physician_advice"
+      ],
+      "evidence_bounded_guidance": [
+        {
+          "claim": "Only a small number of supplements have good evidence for specific use contexts; individual responses vary and all competition-use protocols should be trialled in training.",
+          "evidence_label": "TRANSFER_EVIDENCE",
+          "operational_use": "Provide a neutral evidence-and-risk discussion only after the required inputs are known. Encourage qualified professional review and batch-tested products for athletes subject to anti-doping rules.",
+          "do_not_infer": "Do not recommend a supplement as required, prescribe doses to minors, make disease claims, or make performance guarantees.",
+          "source_url": "https://doi.org/10.1136/bjsports-2018-099027"
+        },
+        {
+          "claim": "Caffeine, creatine, nitrate, and buffering agents are examples discussed in the IOC consensus, but their benefit, safety, timing, and legality depend on the individual and scenario.",
+          "evidence_label": "TRANSFER_EVIDENCE",
+          "operational_use": "If the user explicitly asks, expose a medical/dietitian review checklist and race-practice reminder rather than creating a mandatory protocol.",
+          "do_not_infer": "Do not stack stimulants, recommend unverified products, or treat supplement marketing as evidence.",
+          "source_url": "https://doi.org/10.1136/bjsports-2018-099027"
+        }
+      ],
+      "clinical_referral_flags": [
+        "minor_or_unknown_age",
+        "medication_interaction_risk",
+        "cardiovascular_or_psychiatric_condition",
+        "pregnancy_or_breastfeeding",
+        "anti_doping_testing_or_sanction_risk"
+      ]
+    }
+  },
+  "references": [
+    {
+      "id": "Brandt2025",
+      "title": "Acute physiological responses and performance determinants in Hyrox",
+      "type": "HYROX_DIRECT original study",
+      "url": "https://doi.org/10.3389/fphys.2025.1519240",
+      "limitation": "Eleven recreational athletes; simulated Individual Open race; association evidence."
+    },
+    {
+      "id": "Kerksick2017",
+      "title": "International society of sports nutrition position stand: nutrient timing",
+      "type": "TRANSFER_EVIDENCE position stand",
+      "url": "https://doi.org/10.1186/s12970-017-0189-4",
+      "limitation": "Not HYROX-specific."
+    },
+    {
+      "id": "Walsh2021",
+      "title": "Sleep and the athlete: narrative review and 2021 expert consensus recommendations",
+      "type": "TRANSFER_EVIDENCE consensus",
+      "url": "https://doi.org/10.1136/bjsports-2020-102025",
+      "limitation": "Athlete-wide evidence; individual sleep needs and interventions vary."
+    },
+    {
+      "id": "Maughan2018",
+      "title": "IOC consensus statement: dietary supplements and the high-performance athlete",
+      "type": "TRANSFER_EVIDENCE consensus",
+      "url": "https://doi.org/10.1136/bjsports-2018-099027",
+      "limitation": "No supplement protocol is HYROX-proven."
+    },
+    {
+      "id": "Gabbett2023",
+      "title": "Load Management: What It Is and What It Is Not!",
+      "type": "TRANSFER_EVIDENCE editorial/review",
+      "url": "https://doi.org/10.1177/19417381231179946",
+      "limitation": "Not a fixed-threshold injury prediction model."
+    },
+    {
+      "id": "Lauersen2018",
+      "title": "Strength training as superior, dose-dependent and safe prevention of acute and overuse sports injuries",
+      "type": "TRANSFER_EVIDENCE systematic review and meta-analysis",
+      "url": "https://doi.org/10.1136/bjsports-2018-099078",
+      "limitation": "Interventions and populations were not HYROX-specific."
+    },
+    {
+      "id": "Rogerson2024",
+      "title": "Deloading Practices in Strength and Physique Sports",
+      "type": "TRANSFER_EVIDENCE cross-sectional survey",
+      "url": "https://doi.org/10.1186/s40798-024-00691-y",
+      "limitation": "Describes practice; does not establish causal efficacy for HYROX."
+    }
+  ]
+}

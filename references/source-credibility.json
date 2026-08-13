@@ -1,154 +1,170 @@
 {
   "metadata": {
-    "version": "1.0",
-    "created": "2026-07-05",
-    "purpose": "Source credibility assessment for all HYROX training plan knowledge"
+    "version": "2.0",
+    "updated": "2026-08-13",
+    "purpose": "Traceable credibility register for operational HYROX training-plan knowledge",
+    "selection_policy": "Use primary research, systematic reviews, and consensus statements for constraints. Use a verified video transcript only for clearly-labelled coach practice. Do not use title, subscriber count, social engagement, or a speaker’s elite result as evidence of causation."
   },
-  "sources": {
-    "youtube_channels": [
+  "operational_sources": {
+    "hyrox_direct": [
       {
-        "channel": "RMR Training (Rich Ryan)",
-        "credentials": "3-time HYROX Elite 15 World Championship qualifier, professional HYROX coach, runs RMR Training program",
-        "subscribers_estimate": "50K-100K",
-        "hyrox_focus": "100% HYROX-focused",
-        "content_quality": "Highly structured, data-driven, periodization-focused",
-        "videos_analyzed": 7,
-        "video_ids": ["EWLqwwoOsnc", "C9e7fYIUves", "d00x9-RK1to", "5cJAvDNlklg", "eHnvndpBNnM", "lUJZeJJ7V2s", "7tztdEhBhqA"],
-        "credibility_tier": "A",
-        "key_contribution": "Training plan construction methodology, periodization, threshold training, pacing strategy"
-      },
-      {
-        "channel": "The Next Move (Dan Plews)",
-        "credentials": "PhD in Exercise Physiology, coached Ironman world champions, personal HYROX time 58:57, Endure IQ founder",
-        "subscribers_estimate": "30K-50K",
-        "hyrox_focus": "Mixed (endurance + HYROX)",
-        "content_quality": "Science-heavy, evidence-based, practical application",
-        "videos_analyzed": 3,
-        "video_ids": ["sP13NcbZcKI", "xUcSSpN2nqU", "hxRA1gsNxIA"],
-        "credibility_tier": "A+",
-        "key_contribution": "Dose-response relationships, aerobic development, W Prime concept, compromised running"
-      },
-      {
-        "channel": "WOD Science (Gommaar D'Hulst)",
-        "credentials": "Exercise Physiologist (PhD), runs controlled training studies, publishes research",
-        "subscribers_estimate": "100K+",
-        "hyrox_focus": "Mixed (CrossFit + HYROX)",
-        "content_quality": "Research-backed, study-based, controlled experiments",
-        "videos_analyzed": 3,
-        "video_ids": ["HAKk_u3zmmY", "8Gl9QDw2GIQ", "RuWoKCpXZGg"],
-        "credibility_tier": "A",
-        "key_contribution": "Concurrent training interference, strength programming for HYROX, block periodization"
-      },
-      {
-        "channel": "Nick Bare",
-        "credentials": "Hybrid athlete, 1M+ YouTube subscribers, completed multiple HYROX races, ultramarathon runner",
-        "subscribers_estimate": "1M+",
-        "hyrox_focus": "Mixed (hybrid fitness, HYROX series)",
-        "content_quality": "Training logs, personal experience, high production value",
-        "videos_analyzed": 2,
-        "video_ids": ["ZBltiCOAREc", "FWfxQEjrEYA"],
-        "credibility_tier": "B+",
-        "key_contribution": "High-volume concurrent training example, auto-regulation, hybrid athlete perspective"
-      },
-      {
-        "channel": "Hunter McIntyre",
-        "credentials": "Former HYROX World Record holder, professional fitness racer, multiple HYROX world championship podiums",
-        "subscribers_estimate": "50K-100K",
-        "hyrox_focus": "High (HYROX + obstacle racing)",
-        "content_quality": "Practical tips, race experience, training philosophy",
-        "videos_analyzed": 2,
-        "video_ids": ["KFrTycQtMuY", "WXdyyCfQBeQ"],
-        "credibility_tier": "A",
-        "key_contribution": "Compromised running importance, race strategy, world-class training insights"
-      },
-      {
-        "channel": "8020 Endurance (Matt Fitzgerald)",
-        "credentials": "Best-selling endurance training author (80/20 Running, The Endurance Diet), certified coach",
-        "subscribers_estimate": "20K-50K",
-        "hyrox_focus": "Dedicated HYROX content series",
-        "content_quality": "Evidence-based, structured programs, clear methodology",
-        "videos_analyzed": 1,
-        "video_ids": ["r_OYi6B0tjA"],
-        "credibility_tier": "A",
-        "key_contribution": "Polarized training model applied to HYROX, intensity distribution"
-      },
-      {
-        "channel": "HYROX WORKOUTS",
-        "credentials": "Community channel focused on HYROX preparation",
-        "subscribers_estimate": "10K-30K",
-        "hyrox_focus": "100% HYROX",
-        "content_quality": "Practical, beginner-friendly, workout-focused",
-        "videos_analyzed": 2,
-        "video_ids": ["exvFC4XMXt8", "D3KIz75RHAU"],
-        "credibility_tier": "B",
-        "key_contribution": "Beginner pacing, general HYROX preparation approach"
-      },
-      {
-        "channel": "Miscellaneous",
-        "videos_analyzed": 2,
-        "video_ids": ["essZZ76S84c", "jAThVWh3kfo"],
-        "credibility_tier": "B",
-        "key_contribution": "Additional perspectives on training errors and Zone 3 debate"
-      }
-    ],
-    "academic_papers": [
-      {
+        "id": "Brandt2025",
         "title": "Acute physiological responses and performance determinants in Hyrox",
         "authors": "Brandt T, Ebel C, Lebahn C, Schmidt A",
-        "journal": "Frontiers in Physiology",
+        "source_type": "Peer-reviewed original study",
         "year": 2025,
-        "doi": "10.3389/fphys.2025.1519240",
+        "url": "https://doi.org/10.3389/fphys.2025.1519240",
         "pmcid": "PMC11994925",
-        "sample_size": 11,
-        "credibility_tier": "A",
-        "key_contribution": "First peer-reviewed HYROX study. VO2max as strongest predictor. Running dominance confirmed."
-      },
-      {
-        "title": "Predicting HYROX Performance in Elite Athletes: Station Contributions and Training Implications",
-        "authors": "Nugent F et al.",
-        "source": "ResearchGate (preprint)",
-        "year": 2026,
-        "sample_size": 6000,
-        "credibility_tier": "B+",
-        "key_contribution": "Large-scale performance analysis. Running stages 5-8 as largest performance contributors."
-      },
-      {
-        "title": "Concurrent Training: A Meta-Analysis",
-        "authors": "Wilson JM et al.",
-        "journal": "Journal of Strength and Conditioning Research",
-        "year": 2012,
-        "citations": 1072,
-        "credibility_tier": "A+",
-        "key_contribution": "Interference effect quantification. Running causes more interference than cycling."
-      },
-      {
-        "title": "HYROX Sports Science Report 2025",
-        "source": "HYROX Official (via Instagram @hyroxworld)",
-        "year": 2025,
-        "credibility_tier": "B+",
-        "key_contribution": "VO2max confirmed as #1 predictor in largest HYROX study to date"
+        "population_or_context": "11 recreational athletes; simulated Individual Open HYROX",
+        "credibility_tier": "A for direct relevance; limited for generalization",
+        "operational_use": "Describe HYROX physiological demands and support an endurance emphasis with stated limitations.",
+        "do_not_infer": "A causal universal program, fixed session split, fixed heart-rate zone, or a population-wide performance predictor."
       }
     ],
-    "web_sources": [
+    "transfer_evidence": [
       {
-        "title": "Improving The Aerobic System For HYROX Case Study",
-        "url": "https://triagemethod.com/aerobic-system-for-hyrox/",
-        "author": "Triage Method (professional HYROX coach)",
-        "credibility_tier": "B+",
-        "key_contribution": "Diagnostic approach to aerobic limitations, 'Strong But Fading' archetype"
+        "id": "Kerksick2017",
+        "title": "International society of sports nutrition position stand: nutrient timing",
+        "source_type": "Professional-society position stand",
+        "year": 2017,
+        "url": "https://doi.org/10.1186/s12970-017-0189-4",
+        "credibility_tier": "A-",
+        "operational_use": "Contextual education about fueling, recovery, carbohydrate, and protein timing.",
+        "do_not_infer": "A required HYROX grams-per-hour, sodium, pre-race, or post-race protocol."
       },
       {
-        "title": "The Science of HYROX Performance: A Complete Training and Nutrition Protocol",
-        "url": "https://www.fathomnutrition.com/blogs/all-articles/hyrox-training-guide-science-based-performance",
-        "credibility_tier": "B",
-        "key_contribution": "Complete 16-week periodization template, weekly structure, nutrition protocol"
+        "id": "Walsh2021",
+        "title": "Sleep and the athlete: narrative review and 2021 expert consensus recommendations",
+        "source_type": "Expert consensus and narrative review",
+        "year": 2021,
+        "url": "https://doi.org/10.1136/bjsports-2020-102025",
+        "credibility_tier": "A-",
+        "operational_use": "Sleep screening, long-term behavior, travel-risk management, and trend-based readiness language.",
+        "do_not_infer": "A universal sleep target, wearable diagnosis, clinical sleep management, or automatic session cancellation."
       },
       {
-        "title": "HYROX Weights Overview",
-        "url": "https://www.redbull.com/us-en/hyrox-weights-overview",
+        "id": "Maughan2018",
+        "title": "IOC consensus statement: dietary supplements and the high-performance athlete",
+        "source_type": "IOC consensus statement",
+        "year": 2018,
+        "url": "https://doi.org/10.1136/bjsports-2018-099027",
         "credibility_tier": "A",
-        "key_contribution": "Official race weights for all divisions verified"
+        "operational_use": "Supplement safety, trial-in-training, qualified-review, and anti-doping guardrails.",
+        "do_not_infer": "An obligatory HYROX supplement protocol, dosing advice, medical safety clearance, or guaranteed benefit."
+      },
+      {
+        "id": "Gabbett2023",
+        "title": "Load Management: What It Is and What It Is Not!",
+        "source_type": "Sports-medicine editorial/review",
+        "year": 2023,
+        "url": "https://doi.org/10.1177/19417381231179946",
+        "credibility_tier": "B+",
+        "operational_use": "Progressive overload, specificity, variation, individualization, and recovery as planning principles.",
+        "do_not_infer": "A fixed injury-prediction threshold, especially from one workload metric."
+      },
+      {
+        "id": "Lauersen2018",
+        "title": "Strength training as superior, dose-dependent and safe prevention of acute and overuse sports injuries",
+        "source_type": "Systematic review and meta-analysis of RCTs",
+        "year": 2018,
+        "url": "https://doi.org/10.1136/bjsports-2018-099078",
+        "credibility_tier": "A-",
+        "operational_use": "Retain appropriately progressed strength work for general tissue-capacity and injury-risk-reduction rationale.",
+        "do_not_infer": "That an individual exercise prevents a particular injury or that the trial protocols are HYROX-specific."
+      },
+      {
+        "id": "Rogerson2024",
+        "title": "Deloading Practices in Strength and Physique Sports",
+        "source_type": "Cross-sectional survey",
+        "year": 2024,
+        "url": "https://doi.org/10.1186/s40798-024-00691-y",
+        "credibility_tier": "C+ for causal claims; useful for practice mapping",
+        "operational_use": "Offer individualized lower-stress weeks as an adjustable planning option.",
+        "do_not_infer": "A mandatory deload frequency, duration, or volume reduction for HYROX athletes."
+      }
+    ],
+    "verified_expert_video_sources": [
+      {
+        "id": "Plews58Min",
+        "speaker": "Dr Dan Plews",
+        "credentials_verified": "Exercise physiologist and endurance coach; credentials recorded in transcript audit.",
+        "video_url": "https://www.youtube.com/watch?v=sP13NcbZcKI",
+        "topic": "Training hierarchy and taper practice",
+        "transcript_status": "VERIFIED_TRANSCRIPT",
+        "credibility_tier": "A- as coach practice; not primary HYROX intervention evidence",
+        "operational_use": "Optional frequency/volume-first hierarchy and individualized taper discussion.",
+        "do_not_infer": "Elite training hours, a 50% taper, or 10-15% performance improvement for every athlete."
+      },
+      {
+        "id": "PlewsQA",
+        "speaker": "Dr Dan Plews",
+        "credentials_verified": "Exercise physiologist and endurance coach; credentials recorded in transcript audit.",
+        "video_url": "https://www.youtube.com/watch?v=Wp1KIHBJo-s",
+        "topic": "Endurance sessions, technique, and recovery",
+        "transcript_status": "VERIFIED_TRANSCRIPT",
+        "credibility_tier": "A- as coach practice",
+        "operational_use": "Optional low-intensity station/erg session concepts and individualized technique experiments.",
+        "do_not_infer": "Fixed LT1 or heart-rate targets, mandatory session lengths, or universal burpee technique."
+      },
+      {
+        "id": "RMRGuide",
+        "speaker": "Rich Ryan, Ryan Kent, and Meg Jacoby",
+        "credentials_verified": "Elite HYROX competitors and coaches; credentials recorded in transcript audit.",
+        "video_url": "https://www.youtube.com/watch?v=rjh23_UXwVw",
+        "topic": "Gradual station-load exposure and rest",
+        "transcript_status": "VERIFIED_TRANSCRIPT",
+        "credibility_tier": "A- as practical elite-racing guidance",
+        "operational_use": "Progress one or two new station exposures at a time and normalize recovery review.",
+        "do_not_infer": "A race-time prerequisite for Pro or clinical injury management advice."
+      },
+      {
+        "id": "WODStrength",
+        "speaker": "Gommaar D'Hulst / WOD Science",
+        "credentials_verified": "Sport-science researcher and educator; credentials recorded in transcript audit.",
+        "video_url": "https://www.youtube.com/watch?v=OxNMchwrBss",
+        "topic": "Minimum effective strength dose",
+        "transcript_status": "VERIFIED_TRANSCRIPT",
+        "credibility_tier": "A- for literature-informed coach practice",
+        "operational_use": "Require deficit analysis before selecting strength dose.",
+        "do_not_infer": "One weekly strength session is sufficient for all HYROX athletes."
+      },
+      {
+        "id": "WODCarbs",
+        "speaker": "WOD Science",
+        "credentials_verified": "Sport-science educator; credentials recorded in transcript audit.",
+        "video_url": "https://www.youtube.com/watch?v=9q17kRcVLaQ",
+        "topic": "Carbohydrate strategy and gut training",
+        "transcript_status": "VERIFIED_TRANSCRIPT",
+        "credibility_tier": "B+ with commercial-disclosure caution",
+        "operational_use": "Teach fuel practice and individual GI-tolerance tracking alongside position-statement evidence.",
+        "do_not_infer": "A compulsory 4 g/kg preload or 60-90 g/h race protocol."
+      },
+      {
+        "id": "TriageNutrition",
+        "speaker": "Triage Nutrition",
+        "credentials_verified": "Performance-nutrition practitioner; detail in transcript audit.",
+        "video_url": "https://www.youtube.com/watch?v=LaBn0sxizCA",
+        "topic": "Energy and carbohydrate periodization",
+        "transcript_status": "PARTIAL_TRANSCRIPT",
+        "credibility_tier": "B as coach practice",
+        "operational_use": "Prompt a dietitian-aware review of nutrition periodization.",
+        "do_not_infer": "Calorie floors, energy-availability diagnosis, or individualized diet prescription."
       }
     ]
-  }
+  },
+  "context_only_or_excluded": [
+    {
+      "source": "Professor Shona Halson athlete-sleep video",
+      "url": "https://www.youtube.com/watch?v=OaG5G9WxOuQ",
+      "reason": "Speaker credentials are strong but no transcript was available. Use Walsh et al. 2021 as the operational source instead."
+    },
+    {
+      "source": "Predicting HYROX Performance in Elite Athletes: Station Contributions and Training Implications",
+      "reason": "Previously recorded as a ResearchGate preprint without direct verification in this audit. Excluded from operational rules until primary source, methods, and peer-review status are verified."
+    },
+    {
+      "source": "HYROX Sports Science Report 2025 via social media",
+      "reason": "Social-media repost is not an adequate primary source. Excluded from operational rules until the official report is publicly available and directly verified."
+    }
+  ]
 }

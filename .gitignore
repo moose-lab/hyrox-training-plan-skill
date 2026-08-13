@@ -3,3 +3,6 @@ exports/
 *.pyc
 __pycache__/
 .DS_Store
+
+# Generated discovery output; use the curated transcript audit in references/ instead
+research/video-candidates.json
