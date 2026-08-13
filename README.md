@@ -53,8 +53,11 @@ python3 scripts/validate_plan.py path_to_generated_plan.json
 - `references/training-principles.json`: The 8 scientific constraints the agent must follow.
 - `references/periodization-models.json`: Phase definitions and progression rules.
 - `references/session-types.json`: The catalog of allowed running, strength, and HYROX-specific workouts.
-- `references/race-standards.json`: Official weights and distances for all divisions.
-- `scripts/validate_plan.py`: A script to validate the agent's output.
+- `references/race-standards.json`: Official weights and distances for all divisions (Open, Pro, Doubles, Relay).
+- `references/pacing-strategy.json`: Race-day pacing and station management tactics.
+- `references/source-credibility.json`: Documentation of all academic and coaching sources used.
+- `scripts/validate_plan.py`: A robust Python script to validate the agent's output against scientific principles.
+- `examples/sample-12-week-plan.json`: A complete, validated example of a 12-week training plan.
 
 ## 🎯 Goal: Build a Strong Body, Race Ready
 

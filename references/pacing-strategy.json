@@ -1,0 +1,40 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "created": "2026-07-05",
+    "purpose": "Race-day pacing guidelines for HYROX athletes"
+  },
+  "pacing_principles": [
+    {
+      "id": "PACE_1",
+      "name": "Consistent Run Pacing",
+      "rule": "Run the exact same physical speed on every single run",
+      "rationale": "HYROX is an endurance event. Spiking heart rate early destroys performance on later stations.",
+      "source": "Rich Ryan (RMR Training)"
+    },
+    {
+      "id": "PACE_2",
+      "name": "Station Management",
+      "rule": "Do not go unbroken on heavy stations (Sleds, Wall Balls, Lunges)",
+      "rationale": "Breaking early and often keeps heart rate below redline and prevents muscular failure.",
+      "source": "Dan Plews (The Next Move)"
+    },
+    {
+      "id": "PACE_3",
+      "name": "The First Run Trap",
+      "rule": "Run 10-15 seconds per kilometer slower than your target average pace on Run 1",
+      "rationale": "Adrenaline will make you want to sprint. Starting conservative saves glycogen for the back half.",
+      "source": "Fathom Nutrition"
+    }
+  ],
+  "station_specific_tactics": {
+    "skierg": "Smooth, steady pulls. Don't redline here. Use bodyweight, not just arms.",
+    "sled_push": "Consistent steps. If you stop, keep rests under 5 seconds.",
+    "sled_pull": "Use your bodyweight to fall back. Manage grip fatigue.",
+    "burpee_broad_jump": "Find a rhythm. Step up instead of jumping up if heart rate is too high.",
+    "rowing": "Long, powerful strokes. Similar effort to SkiErg. Don't rush.",
+    "farmers_carry": "Move quickly but maintain posture. Break before grip fails completely.",
+    "sandbag_lunges": "Continuous movement if possible. If breaking, rest with bag on shoulders, don't drop it.",
+    "wall_balls": "Break into manageable sets (e.g., 5 sets of 20, or 10 sets of 10) from the very beginning."
+  }
+}

@@ -1,0 +1,175 @@
+{
+  "metadata": {
+    "created": "2026-07-05",
+    "version": "1.0",
+    "generated_by": "HYROX Training Plan Generator"
+  },
+  "athlete_profile": {
+    "division": "open_men",
+    "current_fitness_level": "intermediate",
+    "sessions_per_week": 6
+  },
+  "plan_structure": {
+    "total_weeks": 12,
+    "phases": {
+      "base": {"weeks": [1, 2, 3]},
+      "build": {"weeks": [4, 5, 6, 7, 8]},
+      "peak": {"weeks": [9, 10, 11]},
+      "taper": {"weeks": [12]}
+    }
+  },
+  "weekly_schedule": [
+    {
+      "week": 1,
+      "phase": "base",
+      "is_deload": false,
+      "sessions": [
+        {"day": 1, "type_id": "RUN_Z2_EASY", "duration": 45},
+        {"day": 2, "type_id": "STR_GENERAL", "duration": 45},
+        {"day": 3, "type_id": "RUN_Z2_EASY", "duration": 45},
+        {"day": 4, "type_id": "STR_GENERAL", "duration": 45},
+        {"day": 5, "type_id": "RUN_Z2_EASY", "duration": 45},
+        {"day": 6, "type_id": "RUN_LONG", "duration": 60}
+      ]
+    },
+    {
+      "week": 2,
+      "phase": "base",
+      "is_deload": false,
+      "sessions": [
+        {"day": 1, "type_id": "RUN_Z2_EASY", "duration": 50},
+        {"day": 2, "type_id": "STR_GENERAL", "duration": 45},
+        {"day": 3, "type_id": "RUN_Z2_EASY", "duration": 50},
+        {"day": 4, "type_id": "STR_GENERAL", "duration": 45},
+        {"day": 5, "type_id": "RUN_Z2_EASY", "duration": 50},
+        {"day": 6, "type_id": "RUN_LONG", "duration": 65}
+      ]
+    },
+    {
+      "week": 3,
+      "phase": "base",
+      "is_deload": false,
+      "sessions": [
+        {"day": 1, "type_id": "RUN_Z2_EASY", "duration": 50},
+        {"day": 2, "type_id": "STR_GENERAL", "duration": 45},
+        {"day": 3, "type_id": "RUN_Z2_EASY", "duration": 50},
+        {"day": 4, "type_id": "STR_GENERAL", "duration": 45},
+        {"day": 5, "type_id": "RUN_Z2_EASY", "duration": 50},
+        {"day": 6, "type_id": "RUN_LONG", "duration": 70}
+      ]
+    },
+    {
+      "week": 4,
+      "phase": "build",
+      "is_deload": true,
+      "sessions": [
+        {"day": 1, "type_id": "RUN_Z2_EASY", "duration": 35},
+        {"day": 3, "type_id": "STR_GENERAL", "duration": 30},
+        {"day": 5, "type_id": "RUN_Z2_EASY", "duration": 35},
+        {"day": 6, "type_id": "RUN_LONG", "duration": 45}
+      ]
+    },
+
+    {
+      "week": 5,
+      "phase": "build",
+      "is_deload": false,
+      "sessions": [
+        {"day": 1, "type_id": "RUN_Z2_EASY", "duration": 50},
+        {"day": 2, "type_id": "HYROX_STATION_COMPLEX", "duration": 50},
+        {"day": 3, "type_id": "RUN_THRESHOLD", "duration": 50},
+        {"day": 4, "type_id": "STR_ENDURANCE", "duration": 45},
+        {"day": 5, "type_id": "RUN_COMPROMISED", "duration": 50},
+        {"day": 6, "type_id": "RUN_LONG", "duration": 75}
+      ]
+    },
+    {
+      "week": 6,
+      "phase": "build",
+      "is_deload": false,
+      "sessions": [
+        {"day": 1, "type_id": "RUN_Z2_EASY", "duration": 50},
+        {"day": 2, "type_id": "HYROX_STATION_COMPLEX", "duration": 50},
+        {"day": 3, "type_id": "RUN_THRESHOLD", "duration": 50},
+        {"day": 4, "type_id": "STR_ENDURANCE", "duration": 45},
+        {"day": 5, "type_id": "RUN_COMPROMISED", "duration": 50},
+        {"day": 6, "type_id": "RUN_LONG", "duration": 75}
+      ]
+    },
+    {
+      "week": 7,
+      "phase": "build",
+      "is_deload": false,
+      "sessions": [
+        {"day": 1, "type_id": "RUN_Z2_EASY", "duration": 50},
+        {"day": 2, "type_id": "HYROX_STATION_COMPLEX", "duration": 50},
+        {"day": 3, "type_id": "RUN_THRESHOLD", "duration": 50},
+        {"day": 4, "type_id": "STR_ENDURANCE", "duration": 45},
+        {"day": 5, "type_id": "RUN_COMPROMISED", "duration": 50},
+        {"day": 6, "type_id": "HYROX_FULL_SIM", "duration": 90}
+      ]
+    },
+    {
+      "week": 8,
+      "phase": "build",
+      "is_deload": true,
+      "sessions": [
+        {"day": 1, "type_id": "RUN_Z2_EASY", "duration": 35},
+        {"day": 3, "type_id": "RUN_THRESHOLD", "duration": 30},
+        {"day": 5, "type_id": "STR_ENDURANCE", "duration": 30},
+        {"day": 6, "type_id": "RUN_LONG", "duration": 50}
+      ]
+    },
+
+
+    {
+      "week": 9,
+      "phase": "peak",
+      "is_deload": false,
+      "sessions": [
+        {"day": 1, "type_id": "RUN_Z2_EASY", "duration": 45},
+        {"day": 2, "type_id": "HYROX_PARTIAL_SIM", "duration": 45},
+        {"day": 3, "type_id": "RUN_THRESHOLD", "duration": 45},
+        {"day": 4, "type_id": "STR_ENDURANCE", "duration": 40},
+        {"day": 5, "type_id": "RUN_COMPROMISED", "duration": 45},
+        {"day": 6, "type_id": "RUN_LONG", "duration": 60}
+      ]
+    },
+    {
+      "week": 10,
+      "phase": "peak",
+      "is_deload": false,
+      "sessions": [
+        {"day": 1, "type_id": "RUN_Z2_EASY", "duration": 45},
+        {"day": 2, "type_id": "HYROX_PARTIAL_SIM", "duration": 45},
+        {"day": 3, "type_id": "RUN_THRESHOLD", "duration": 45},
+        {"day": 4, "type_id": "STR_ENDURANCE", "duration": 40},
+        {"day": 5, "type_id": "RUN_COMPROMISED", "duration": 45},
+        {"day": 6, "type_id": "HYROX_FULL_SIM", "duration": 90}
+      ]
+    },
+    {
+      "week": 11,
+      "phase": "peak",
+      "is_deload": false,
+      "sessions": [
+        {"day": 1, "type_id": "RUN_Z2_EASY", "duration": 45},
+        {"day": 2, "type_id": "HYROX_PARTIAL_SIM", "duration": 45},
+        {"day": 3, "type_id": "RUN_THRESHOLD", "duration": 45},
+        {"day": 4, "type_id": "STR_ENDURANCE", "duration": 40},
+        {"day": 5, "type_id": "RUN_COMPROMISED", "duration": 45},
+        {"day": 6, "type_id": "RUN_LONG", "duration": 60}
+      ]
+    },
+    {
+      "week": 12,
+      "phase": "taper",
+      "is_deload": false,
+      "sessions": [
+        {"day": 1, "type_id": "RUN_Z2_EASY", "duration": 30},
+        {"day": 3, "type_id": "RUN_THRESHOLD", "duration": 20},
+        {"day": 5, "type_id": "RUN_Z2_EASY", "duration": 20}
+      ]
+    }
+  ]
+}

@@ -8,7 +8,7 @@
     "plan_parameters": {
       "total_weeks": {"type": "integer", "min": 8, "max": 16, "default": 12},
       "sessions_per_week": {"type": "integer", "min": 4, "max": 10, "default": 6},
-      "division": {"type": "enum", "options": ["open_women", "open_men", "pro_women", "pro_men", "elite_15_women", "elite_15_men"], "default": "open_men"},
+      "division": {"type": "enum", "options": ["open_women", "open_men", "pro_women", "pro_men", "elite_15_women", "elite_15_men", "doubles_women", "doubles_men", "doubles_mixed", "relay_women", "relay_men", "relay_mixed"], "default": "open_men"},
       "current_fitness_level": {"type": "enum", "options": ["beginner", "intermediate", "advanced", "elite"], "default": "intermediate"},
       "target_finish_time_min": {"type": "integer", "min": 55, "max": 120, "default": 80, "optional": true},
       "available_equipment": {"type": "array", "options": ["sled", "skierg", "rower", "kettlebells", "sandbag", "wall_ball", "running_track", "treadmill"]},
@@ -61,9 +61,9 @@
         "day_4": "STR_ENDURANCE (lower body focus)",
         "day_5": "RUN_Z2_EASY + REC_MOBILITY",
         "day_6": "RUN_LONG (60-75 min) OR HYROX_FULL_SIM",
-        "day_7": "STR_ENDURANCE (upper body) + WALL_BALLS",
-        "rest_days": 0,
-        "notes": "High volume. Requires good recovery capacity. Include deload weeks."
+        "day_7": "REC_REST (Complete Rest Day)",
+        "rest_days": 1,
+        "notes": "High volume. Upper body/wall balls moved to day 4 or 2. Requires good recovery capacity. Must include 1 complete rest day."
       },
       "8_plus_sessions": {
         "note": "For elite athletes (Dan Plews model: 2 sessions/day, 15 hrs/week)",
